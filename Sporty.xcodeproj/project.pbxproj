@@ -1,0 +1,618 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EE27C1622A1A7962006CF044 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE27C1612A1A7962006CF044 /* AppDelegate.swift */; };
+		EE27C1642A1A7962006CF044 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE27C1632A1A7962006CF044 /* SceneDelegate.swift */; };
+		EE27C1662A1A7962006CF044 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE27C1652A1A7962006CF044 /* ViewController.swift */; };
+		EE27C1692A1A7962006CF044 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE27C1672A1A7962006CF044 /* Main.storyboard */; };
+		EE27C16C2A1A7962006CF044 /* Sporty.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EE27C16A2A1A7962006CF044 /* Sporty.xcdatamodeld */; };
+		EE27C16E2A1A7963006CF044 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE27C16D2A1A7963006CF044 /* Assets.xcassets */; };
+		EE27C1712A1A7963006CF044 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE27C16F2A1A7963006CF044 /* LaunchScreen.storyboard */; };
+		EE27C17C2A1A7963006CF044 /* SportyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE27C17B2A1A7963006CF044 /* SportyTests.swift */; };
+		EE27C1862A1A7963006CF044 /* SportyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE27C1852A1A7963006CF044 /* SportyUITests.swift */; };
+		EE27C1882A1A7963006CF044 /* SportyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE27C1872A1A7963006CF044 /* SportyUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EE27C1782A1A7963006CF044 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE27C1562A1A7961006CF044 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE27C15D2A1A7962006CF044;
+			remoteInfo = Sporty;
+		};
+		EE27C1822A1A7963006CF044 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE27C1562A1A7961006CF044 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE27C15D2A1A7962006CF044;
+			remoteInfo = Sporty;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EE27C15E2A1A7962006CF044 /* Sporty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sporty.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE27C1612A1A7962006CF044 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EE27C1632A1A7962006CF044 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		EE27C1652A1A7962006CF044 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EE27C1682A1A7962006CF044 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EE27C16B2A1A7962006CF044 /* Sporty.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Sporty.xcdatamodel; sourceTree = "<group>"; };
+		EE27C16D2A1A7963006CF044 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EE27C1702A1A7963006CF044 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EE27C1722A1A7963006CF044 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE27C1772A1A7963006CF044 /* SportyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SportyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE27C17B2A1A7963006CF044 /* SportyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportyTests.swift; sourceTree = "<group>"; };
+		EE27C1812A1A7963006CF044 /* SportyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SportyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE27C1852A1A7963006CF044 /* SportyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportyUITests.swift; sourceTree = "<group>"; };
+		EE27C1872A1A7963006CF044 /* SportyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE27C15B2A1A7962006CF044 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE27C1742A1A7963006CF044 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE27C17E2A1A7963006CF044 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EE27C1552A1A7961006CF044 = {
+			isa = PBXGroup;
+			children = (
+				EE27C1602A1A7962006CF044 /* Sporty */,
+				EE27C17A2A1A7963006CF044 /* SportyTests */,
+				EE27C1842A1A7963006CF044 /* SportyUITests */,
+				EE27C15F2A1A7962006CF044 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EE27C15F2A1A7962006CF044 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE27C15E2A1A7962006CF044 /* Sporty.app */,
+				EE27C1772A1A7963006CF044 /* SportyTests.xctest */,
+				EE27C1812A1A7963006CF044 /* SportyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE27C1602A1A7962006CF044 /* Sporty */ = {
+			isa = PBXGroup;
+			children = (
+				EE27C1612A1A7962006CF044 /* AppDelegate.swift */,
+				EE27C1632A1A7962006CF044 /* SceneDelegate.swift */,
+				EE27C1652A1A7962006CF044 /* ViewController.swift */,
+				EE27C1672A1A7962006CF044 /* Main.storyboard */,
+				EE27C16D2A1A7963006CF044 /* Assets.xcassets */,
+				EE27C16F2A1A7963006CF044 /* LaunchScreen.storyboard */,
+				EE27C1722A1A7963006CF044 /* Info.plist */,
+				EE27C16A2A1A7962006CF044 /* Sporty.xcdatamodeld */,
+			);
+			path = Sporty;
+			sourceTree = "<group>";
+		};
+		EE27C17A2A1A7963006CF044 /* SportyTests */ = {
+			isa = PBXGroup;
+			children = (
+				EE27C17B2A1A7963006CF044 /* SportyTests.swift */,
+			);
+			path = SportyTests;
+			sourceTree = "<group>";
+		};
+		EE27C1842A1A7963006CF044 /* SportyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EE27C1852A1A7963006CF044 /* SportyUITests.swift */,
+				EE27C1872A1A7963006CF044 /* SportyUITestsLaunchTests.swift */,
+			);
+			path = SportyUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE27C15D2A1A7962006CF044 /* Sporty */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE27C18B2A1A7963006CF044 /* Build configuration list for PBXNativeTarget "Sporty" */;
+			buildPhases = (
+				EE27C15A2A1A7962006CF044 /* Sources */,
+				EE27C15B2A1A7962006CF044 /* Frameworks */,
+				EE27C15C2A1A7962006CF044 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Sporty;
+			productName = Sporty;
+			productReference = EE27C15E2A1A7962006CF044 /* Sporty.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EE27C1762A1A7963006CF044 /* SportyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE27C18E2A1A7963006CF044 /* Build configuration list for PBXNativeTarget "SportyTests" */;
+			buildPhases = (
+				EE27C1732A1A7963006CF044 /* Sources */,
+				EE27C1742A1A7963006CF044 /* Frameworks */,
+				EE27C1752A1A7963006CF044 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE27C1792A1A7963006CF044 /* PBXTargetDependency */,
+			);
+			name = SportyTests;
+			productName = SportyTests;
+			productReference = EE27C1772A1A7963006CF044 /* SportyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EE27C1802A1A7963006CF044 /* SportyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE27C1912A1A7963006CF044 /* Build configuration list for PBXNativeTarget "SportyUITests" */;
+			buildPhases = (
+				EE27C17D2A1A7963006CF044 /* Sources */,
+				EE27C17E2A1A7963006CF044 /* Frameworks */,
+				EE27C17F2A1A7963006CF044 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE27C1832A1A7963006CF044 /* PBXTargetDependency */,
+			);
+			name = SportyUITests;
+			productName = SportyUITests;
+			productReference = EE27C1812A1A7963006CF044 /* SportyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE27C1562A1A7961006CF044 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					EE27C15D2A1A7962006CF044 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					EE27C1762A1A7963006CF044 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = EE27C15D2A1A7962006CF044;
+					};
+					EE27C1802A1A7963006CF044 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = EE27C15D2A1A7962006CF044;
+					};
+				};
+			};
+			buildConfigurationList = EE27C1592A1A7961006CF044 /* Build configuration list for PBXProject "Sporty" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EE27C1552A1A7961006CF044;
+			productRefGroup = EE27C15F2A1A7962006CF044 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE27C15D2A1A7962006CF044 /* Sporty */,
+				EE27C1762A1A7963006CF044 /* SportyTests */,
+				EE27C1802A1A7963006CF044 /* SportyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE27C15C2A1A7962006CF044 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE27C1712A1A7963006CF044 /* LaunchScreen.storyboard in Resources */,
+				EE27C16E2A1A7963006CF044 /* Assets.xcassets in Resources */,
+				EE27C1692A1A7962006CF044 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE27C1752A1A7963006CF044 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE27C17F2A1A7963006CF044 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE27C15A2A1A7962006CF044 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE27C16C2A1A7962006CF044 /* Sporty.xcdatamodeld in Sources */,
+				EE27C1662A1A7962006CF044 /* ViewController.swift in Sources */,
+				EE27C1622A1A7962006CF044 /* AppDelegate.swift in Sources */,
+				EE27C1642A1A7962006CF044 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE27C1732A1A7963006CF044 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE27C17C2A1A7963006CF044 /* SportyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE27C17D2A1A7963006CF044 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE27C1862A1A7963006CF044 /* SportyUITests.swift in Sources */,
+				EE27C1882A1A7963006CF044 /* SportyUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EE27C1792A1A7963006CF044 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE27C15D2A1A7962006CF044 /* Sporty */;
+			targetProxy = EE27C1782A1A7963006CF044 /* PBXContainerItemProxy */;
+		};
+		EE27C1832A1A7963006CF044 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE27C15D2A1A7962006CF044 /* Sporty */;
+			targetProxy = EE27C1822A1A7963006CF044 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EE27C1672A1A7962006CF044 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE27C1682A1A7962006CF044 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EE27C16F2A1A7963006CF044 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE27C1702A1A7963006CF044 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EE27C1892A1A7963006CF044 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EE27C18A2A1A7963006CF044 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EE27C18C2A1A7963006CF044 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Sporty/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iti.Sporty;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EE27C18D2A1A7963006CF044 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Sporty/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iti.Sporty;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EE27C18F2A1A7963006CF044 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iti.SportyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sporty.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Sporty";
+			};
+			name = Debug;
+		};
+		EE27C1902A1A7963006CF044 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iti.SportyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sporty.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Sporty";
+			};
+			name = Release;
+		};
+		EE27C1922A1A7963006CF044 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iti.SportyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Sporty;
+			};
+			name = Debug;
+		};
+		EE27C1932A1A7963006CF044 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iti.SportyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Sporty;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE27C1592A1A7961006CF044 /* Build configuration list for PBXProject "Sporty" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE27C1892A1A7963006CF044 /* Debug */,
+				EE27C18A2A1A7963006CF044 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE27C18B2A1A7963006CF044 /* Build configuration list for PBXNativeTarget "Sporty" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE27C18C2A1A7963006CF044 /* Debug */,
+				EE27C18D2A1A7963006CF044 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE27C18E2A1A7963006CF044 /* Build configuration list for PBXNativeTarget "SportyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE27C18F2A1A7963006CF044 /* Debug */,
+				EE27C1902A1A7963006CF044 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE27C1912A1A7963006CF044 /* Build configuration list for PBXNativeTarget "SportyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE27C1922A1A7963006CF044 /* Debug */,
+				EE27C1932A1A7963006CF044 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EE27C16A2A1A7962006CF044 /* Sporty.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EE27C16B2A1A7962006CF044 /* Sporty.xcdatamodel */,
+			);
+			currentVersion = EE27C16B2A1A7962006CF044 /* Sporty.xcdatamodel */;
+			path = Sporty.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = EE27C1562A1A7961006CF044 /* Project object */;
+}
