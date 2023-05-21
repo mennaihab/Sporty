@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		EE27C1622A1A7962006CF044 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE27C1612A1A7962006CF044 /* AppDelegate.swift */; };
 		EE27C1642A1A7962006CF044 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE27C1632A1A7962006CF044 /* SceneDelegate.swift */; };
-		EE27C1662A1A7962006CF044 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE27C1652A1A7962006CF044 /* ViewController.swift */; };
+		EE27C1662A1A7962006CF044 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE27C1652A1A7962006CF044 /* HomeViewController.swift */; };
 		EE27C1692A1A7962006CF044 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE27C1672A1A7962006CF044 /* Main.storyboard */; };
 		EE27C16C2A1A7962006CF044 /* Sporty.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EE27C16A2A1A7962006CF044 /* Sporty.xcdatamodeld */; };
 		EE27C16E2A1A7963006CF044 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE27C16D2A1A7963006CF044 /* Assets.xcassets */; };
@@ -17,6 +17,11 @@
 		EE27C17C2A1A7963006CF044 /* SportyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE27C17B2A1A7963006CF044 /* SportyTests.swift */; };
 		EE27C1862A1A7963006CF044 /* SportyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE27C1852A1A7963006CF044 /* SportyUITests.swift */; };
 		EE27C1882A1A7963006CF044 /* SportyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE27C1872A1A7963006CF044 /* SportyUITestsLaunchTests.swift */; };
+		EE5C40092A1A9E52008EA0F6 /* SportsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5C40082A1A9E52008EA0F6 /* SportsCollectionViewCell.swift */; };
+		EE5C400B2A1AAA8A008EA0F6 /* basketball.png in Resources */ = {isa = PBXBuildFile; fileRef = EE5C400A2A1AAA8A008EA0F6 /* basketball.png */; };
+		EE5C400F2A1AC836008EA0F6 /* football.png in Resources */ = {isa = PBXBuildFile; fileRef = EE5C400C2A1AC836008EA0F6 /* football.png */; };
+		EE5C40102A1AC836008EA0F6 /* tennis.png in Resources */ = {isa = PBXBuildFile; fileRef = EE5C400D2A1AC836008EA0F6 /* tennis.png */; };
+		EE5C40112A1AC836008EA0F6 /* cricket.png in Resources */ = {isa = PBXBuildFile; fileRef = EE5C400E2A1AC836008EA0F6 /* cricket.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +45,7 @@
 		EE27C15E2A1A7962006CF044 /* Sporty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sporty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE27C1612A1A7962006CF044 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE27C1632A1A7962006CF044 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EE27C1652A1A7962006CF044 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EE27C1652A1A7962006CF044 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		EE27C1682A1A7962006CF044 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EE27C16B2A1A7962006CF044 /* Sporty.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Sporty.xcdatamodel; sourceTree = "<group>"; };
 		EE27C16D2A1A7963006CF044 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +56,11 @@
 		EE27C1812A1A7963006CF044 /* SportyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SportyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE27C1852A1A7963006CF044 /* SportyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportyUITests.swift; sourceTree = "<group>"; };
 		EE27C1872A1A7963006CF044 /* SportyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EE5C40082A1A9E52008EA0F6 /* SportsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsCollectionViewCell.swift; sourceTree = "<group>"; };
+		EE5C400A2A1AAA8A008EA0F6 /* basketball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = basketball.png; sourceTree = "<group>"; };
+		EE5C400C2A1AC836008EA0F6 /* football.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = football.png; sourceTree = "<group>"; };
+		EE5C400D2A1AC836008EA0F6 /* tennis.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tennis.png; sourceTree = "<group>"; };
+		EE5C400E2A1AC836008EA0F6 /* cricket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cricket.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +111,17 @@
 		EE27C1602A1A7962006CF044 /* Sporty */ = {
 			isa = PBXGroup;
 			children = (
+				EE27C1972A1A84C1006CF044 /* Services */,
+				EE27C1962A1A84A2006CF044 /* Modules */,
+				EE27C1952A1A849E006CF044 /* Model */,
+				EE27C1942A1A849B006CF044 /* View */,
 				EE27C1612A1A7962006CF044 /* AppDelegate.swift */,
 				EE27C1632A1A7962006CF044 /* SceneDelegate.swift */,
-				EE27C1652A1A7962006CF044 /* ViewController.swift */,
-				EE27C1672A1A7962006CF044 /* Main.storyboard */,
 				EE27C16D2A1A7963006CF044 /* Assets.xcassets */,
+				EE5C400E2A1AC836008EA0F6 /* cricket.png */,
+				EE5C400C2A1AC836008EA0F6 /* football.png */,
+				EE5C400D2A1AC836008EA0F6 /* tennis.png */,
+				EE5C400A2A1AAA8A008EA0F6 /* basketball.png */,
 				EE27C16F2A1A7963006CF044 /* LaunchScreen.storyboard */,
 				EE27C1722A1A7963006CF044 /* Info.plist */,
 				EE27C16A2A1A7962006CF044 /* Sporty.xcdatamodeld */,
@@ -128,6 +144,53 @@
 				EE27C1872A1A7963006CF044 /* SportyUITestsLaunchTests.swift */,
 			);
 			path = SportyUITests;
+			sourceTree = "<group>";
+		};
+		EE27C1942A1A849B006CF044 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EE27C1672A1A7962006CF044 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EE27C1952A1A849E006CF044 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EE27C1962A1A84A2006CF044 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				EE5C40062A1A8A3E008EA0F6 /* Home */,
+			);
+			name = Modules;
+			sourceTree = "<group>";
+		};
+		EE27C1972A1A84C1006CF044 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		EE5C40062A1A8A3E008EA0F6 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EE5C40072A1A8A50008EA0F6 /* View */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		EE5C40072A1A8A50008EA0F6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EE27C1652A1A7962006CF044 /* HomeViewController.swift */,
+				EE5C40082A1A9E52008EA0F6 /* SportsCollectionViewCell.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,8 +297,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE5C400F2A1AC836008EA0F6 /* football.png in Resources */,
+				EE5C40112A1AC836008EA0F6 /* cricket.png in Resources */,
 				EE27C1712A1A7963006CF044 /* LaunchScreen.storyboard in Resources */,
 				EE27C16E2A1A7963006CF044 /* Assets.xcassets in Resources */,
+				EE5C400B2A1AAA8A008EA0F6 /* basketball.png in Resources */,
+				EE5C40102A1AC836008EA0F6 /* tennis.png in Resources */,
 				EE27C1692A1A7962006CF044 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,8 +328,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE5C40092A1A9E52008EA0F6 /* SportsCollectionViewCell.swift in Sources */,
 				EE27C16C2A1A7962006CF044 /* Sporty.xcdatamodeld in Sources */,
-				EE27C1662A1A7962006CF044 /* ViewController.swift in Sources */,
+				EE27C1662A1A7962006CF044 /* HomeViewController.swift in Sources */,
 				EE27C1622A1A7962006CF044 /* AppDelegate.swift in Sources */,
 				EE27C1642A1A7962006CF044 /* SceneDelegate.swift in Sources */,
 			);
