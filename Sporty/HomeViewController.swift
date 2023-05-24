@@ -11,6 +11,9 @@ class HomeViewController: UIViewController ,UICollectionViewDelegate,UICollectio
     
     @IBOutlet weak var homeTitle: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
+    lazy var viewModel: LeagueViewModel = {
+        return LeagueViewModel()
+    }()
     var sprortsNames = ["Football","Basketball","Cricket","tennis"]
     var sportsImages = ["football.png","basketball.png","cricket.png","tennis.png"]
     
@@ -30,7 +33,13 @@ class HomeViewController: UIViewController ,UICollectionViewDelegate,UICollectio
     }
     
     
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if indexPath.row == 0{
+            viewModel.getFootballLeaguesFromApi()
+        }
+        print(indexPath.row)
+     
+    }
     func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
         if let cell = collectionView.cellForItem(at: indexPath){
             cell.contentView.backgroundColor = UIColor.orange
