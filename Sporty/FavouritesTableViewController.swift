@@ -54,7 +54,7 @@ class FavouritesTableViewController: UITableViewController {
 
     }
     
-//    override func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
+    //    override func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
 //        if let cell = tableView.cellForRow(at: indexPath){
 //            cell.contentView.backgroundColor = UIColor.orange
 //        }

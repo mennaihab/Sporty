@@ -44,7 +44,7 @@ class LeagueViewController: UITableViewController {
         
         
         self.navigationItem.title = "Leagues"
-        viewModel.getFootballLeaguesFromApi()
+        viewModel.getLeaguesFromApi(type: CricketLeagues.self)
 
         observeViewModel()
         

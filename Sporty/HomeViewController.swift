@@ -35,7 +35,7 @@ class HomeViewController: UIViewController ,UICollectionViewDelegate,UICollectio
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if indexPath.row == 0{
-            viewModel.getFootballLeaguesFromApi()
+          //  viewModel.getFootballLeaguesFromApi()
         }
         print(indexPath.row)
      
