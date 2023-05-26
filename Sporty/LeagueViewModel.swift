@@ -10,7 +10,7 @@ import Foundation
 class LeagueViewModel {
     let apiService:ApiServiceProtocol = ApiService()
     
-   // var leaguesNames:[String]?
+    // var leaguesNames:[String]?
     
     
     //initial false until change when try to get data from api
@@ -26,13 +26,13 @@ class LeagueViewModel {
         
         didSet {
             reloadTableViewClosure?()
-//            for item in leaguesArray{
-//                var name = item.name
-//                leaguesNames?.append(name!)
-//
-            }
-            
+            //            for item in leaguesArray{
+            //                var name = item.name
+            //                leaguesNames?.append(name!)
+            //
         }
+        
+    }
     
     
     //closures
@@ -40,116 +40,167 @@ class LeagueViewModel {
     var  reloadTableViewClosure: (()->())?
     
     
-    func getFootballLeaguesFromApi () {
+    //    func getFootballLeaguesFromApi () {
+    //        self.isLoading = true
+    //        apiService.getFootballLeaguesFromApi { [weak self] (result, error )in
+    //            self?.isLoading = true
+    //            if let error = error{
+    //                print(error)
+    //                //    self?.alertMessage = error.rawValue
+    //            }
+    //            else{
+    //                print("data from api")
+    //                print(result?.result?[0].name)
+    //                self?.addFootballResultsToArray(leagues: result!)
+    //            }
+    //        }
+    //
+    //    }
+    func getLeaguesFromApi<T>(type:T.Type)
+    where T : Leagues
+    {
         self.isLoading = true
-        apiService.getFootballLeaguesFromApi { [weak self] (result, error )in
+        apiService.getLeaguesFromApi(compilationHandler: { [weak self] (result, error ) in
             self?.isLoading = true
             if let error = error{
                 print(error)
                 //    self?.alertMessage = error.rawValue
             }
             else{
-                print("data from api")
-                print(result?.result?[0].name)
-                self?.addFootballResultsToArray(leagues: result!)
+                
+                self?.addResultsToArray(leagues: result!)
             }
-        }
-        
+            
+        }, type: type)
     }
     
-    func addFootballResultsToArray(leagues: FootballLeaguesJsonResult){
-        for item in leagues.result!{
-            var league = LeagueViewModelCell()
-            league.name = item.name
-            if(item.logo != ""){
+    
+    func addResultsToArray(leagues:[Leagues]){
+    
+        if(leagues is [FootballLeagues])
+        {
+            let castedLeagues = leagues as! [FootballLeagues]
+            for item in castedLeagues{
+                var league = LeagueViewModelCell()
+                league.name = item.name
                 league.logo = item.logo
+                if(item.logo == "")
+                {
+                    league.logo = "//"
+                }
+                print(item)
+                leaguesArray.append(league)
+                
             }
-            else{
-                item.logo = "//"
-            }
-            print(item)
-            leaguesArray.append(league)
+        }
+        else {
             
-            print(item.name)
+            for item in leagues{
+                var league = LeagueViewModelCell()
+                league.name = item.name
+                league.logo = "//"
+                print(item)
+                leaguesArray.append(league)
+            }
+            
         }
         isLoading = false
         filteredArray = leaguesArray
         numberOfCells = filteredArray.count
         print(numberOfCells)
         
-        
     }
     
     
-    func getLeaguesFromApi (sportKind:String) {
-        self.isLoading = true
-        
-        apiService.getLeaguesFromApi(compilationHandler:
-                                        { [weak self] (result, error )in
-            self?.isLoading = true
-            if let error = error{
-                print(error)
-                //    self?.alertMessage = error.rawValue
-            }
-            else{
-                print("data from api")
-                print(result?.result?[0].name)
-                self?.addResultsToArray(leagues: result!,sportKind: sportKind)
-            }
-        }, sportKind: sportKind)
-    }
-    
-    private func addResultsToArray(leagues:LeaguesJsonResult,sportKind:String){
-        
-        for item in leagues.result!{
-            var league = LeagueViewModelCell()
-            if(sportKind == "basketball"){
-                
-                league.name = item.name
-                league.logo = "//"
-            }
-            else if(sportKind == "cricket"){
-                
-                league.name = item.name
-                league.logo = "//"
-            }
-            
-            else{
-                
-                league.name = item.name
-                league.logo = "//"
-            }
-            print(item)
-            leaguesArray.append(league)
-            
-            print(item.name)
-        }
-        numberOfCells = leaguesArray.count
-        print(numberOfCells)
-        
-    }
+    //    func addFootballResultsToArray(leagues: FootballLeaguesJsonResult){
+    //        for item in leagues.result!{
+    //            var league = LeagueViewModelCell()
+    //            league.name = item.name
+    //            if(item.logo != ""){
+    //                league.logo = item.logo
+    //            }
+    //            else{
+    //                item.logo = "//"
+    //            }
+    //            print(item)
+    //            leaguesArray.append(league)
+    //
+    //            print(item.name)
+    //        }
+    //        isLoading = false
+    //        filteredArray = leaguesArray
+    //        numberOfCells = filteredArray.count
+    //        print(numberOfCells)
+    //
+    //
+    //    }
+    //
+    //
+    //    func getLeaguesFromApi (sportKind:String) {
+    //        self.isLoading = true
+    //
+    //        apiService.getLeaguesFromApi(compilationHandler:
+    //                                        { [weak self] (result, error )in
+    //            self?.isLoading = true
+    //            if let error = error{
+    //                print(error)
+    //                //    self?.alertMessage = error.rawValue
+    //            }
+    //            else{
+    //                print("data from api")
+    //                print(result?.result?[0].name)
+    //                self?.addResultsToArray(leagues: result!,sportKind: sportKind)
+    //            }
+    //        }, sportKind: sportKind)
+    //    }
+    //
+    //    private func addResultsToArray(leagues:LeaguesJsonResult,sportKind:String){
+    //
+    //        for item in leagues.result!{
+    //            var league = LeagueViewModelCell()
+    //            if(sportKind == "basketball"){
+    //
+    //                league.name = item.name
+    //                league.logo = "//"
+    //            }
+    //            else if(sportKind == "cricket"){
+    //
+    //                league.name = item.name
+    //                league.logo = "//"
+    //            }
+    //
+    //            else{
+    //
+    //                league.name = item.name
+    //                league.logo = "//"
+    //            }
+    //            print(item)
+    //            leaguesArray.append(league)
+    //
+    //            print(item.name)
+    //        }
+    //        numberOfCells = leaguesArray.count
+    //        print(numberOfCells)
+    //
+    //    }
     
     
     func getResultSearch(searchedText:String){
         
-       filteredArray = searchedText.isEmpty||searchedText == "" ? leaguesArray : leaguesArray.filter{
+        filteredArray = searchedText.isEmpty||searchedText == "" ? leaguesArray : leaguesArray.filter{
             $0.name?.range(of: searchedText, options: .caseInsensitive) != nil
         }
         numberOfCells = filteredArray.count
     }
 }
-    
-    //func getCellViewModel( at indexPath: IndexPath ) -> PhotoListCellViewModel {
-      //  return cellViewModels[indexPath.row]
-    //}
-    
-  
-    struct LeagueViewModelCell{
-        var name :String?
-        var logo:String?
-    }
 
-    
-    
-    
+
+struct LeagueViewModelCell{
+    var name :String?
+    var logo:String?
+}
+
+
+
+
 
