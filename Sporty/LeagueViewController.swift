@@ -17,6 +17,7 @@ class LeagueViewController: UITableViewController {
     
     var networkIndicator = UIActivityIndicatorView(style: .large)
     override func viewDidLoad() {
+        var l:[Event]?
         super.viewDidLoad()
         tableView.register(UINib(nibName: "LeagueTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
         tableView.separatorColor = UIColor.clear
@@ -44,9 +45,18 @@ class LeagueViewController: UITableViewController {
         
         
         self.navigationItem.title = "Leagues"
-        viewModel.getLeaguesFromApi(type: CricketLeagues.self)
+//        var api = ApiService()
+//        api.getNowPlayingEventsFromApi(compilationHandler: { response, error in
+//            print(response?.count)
+//            for item in response!
+//            {
+//                print(item)
+//            }
+//        }, type: FootballEvent.self, leagId: "205")
+//      
+       // viewModel.getLeaguesFromApi(type: CricketLeagues.self)
 
-        observeViewModel()
+        //observeViewModel()
         
         
     }

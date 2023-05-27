@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct FootballLeagues : Leagues,Decodable{
+struct FootballLeagues : Leagues{
     static let url: String = "https://apiv2.allsportsapi.com/football/?met=Leagues&APIkey=\(key)"
     
     let id: Int
