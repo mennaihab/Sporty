@@ -34,12 +34,17 @@ class HomeViewController: UIViewController ,UICollectionViewDelegate,UICollectio
     
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if indexPath.row == 0{
-          //  viewModel.getFootballLeaguesFromApi()
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "leagues") as! LeagueViewController
+        switch(indexPath.row)
+        {
+        case 0: vc.sportType = "football"
+        case 1:vc.sportType = "basketball"
+        case 2:vc.sportType = "cricket"
+        default:vc.sportType = "tennis"
         }
-        print(indexPath.row)
-     
+        navigationController?.pushViewController(vc, animated: true)
     }
+        
     func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
         if let cell = collectionView.cellForItem(at: indexPath){
             cell.contentView.backgroundColor = UIColor.orange

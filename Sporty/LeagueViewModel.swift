@@ -9,10 +9,6 @@ import Foundation
 
 class LeagueViewModel {
     let apiService:ApiServiceProtocol = ApiService()
-    
-    // var leaguesNames:[String]?
-    
-    
     //initial false until change when try to get data from api
     var isLoading: Bool = false {
         didSet {
@@ -38,24 +34,7 @@ class LeagueViewModel {
     //closures
     var updateIndicatorClosure: (()->())?
     var  reloadTableViewClosure: (()->())?
-    
-    
-    //    func getFootballLeaguesFromApi () {
-    //        self.isLoading = true
-    //        apiService.getFootballLeaguesFromApi { [weak self] (result, error )in
-    //            self?.isLoading = true
-    //            if let error = error{
-    //                print(error)
-    //                //    self?.alertMessage = error.rawValue
-    //            }
-    //            else{
-    //                print("data from api")
-    //                print(result?.result?[0].name)
-    //                self?.addFootballResultsToArray(leagues: result!)
-    //            }
-    //        }
-    //
-    //    }
+  
     func getLeaguesFromApi<T>(type:T.Type)
     where T : Leagues
     {
@@ -67,7 +46,6 @@ class LeagueViewModel {
                 //    self?.alertMessage = error.rawValue
             }
             else{
-                
                 self?.addResultsToArray(leagues: result!)
             }
             
@@ -84,23 +62,45 @@ class LeagueViewModel {
                 var league = LeagueViewModelCell()
                 league.name = item.name
                 league.logo = item.logo
-                if(item.logo == "")
+                if(item.logo == nil)
                 {
-                    league.logo = "//"
+                    league.logo = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fpixabay.com%2Fimages%2Fsearch%2Ffootball%2F&psig=AOvVaw0ZmhzCWWUmEtKOSHvHMiKS&ust=1685470805139000&source=images&cd=vfe&ved=0CA4QjRxqFwoTCMjCzYPlmv8CFQAAAAAdAAAAABAE"
                 }
                 print(item)
                 leaguesArray.append(league)
                 
             }
         }
-        else {
-            
+        else if (leagues is [BasketballLeagues]) {
+            let castedLeagues = leagues as! [BasketballLeagues]
             for item in leagues{
                 var league = LeagueViewModelCell()
                 league.name = item.name
-                league.logo = "//"
+                league.logo = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fstock.adobe.com%2Fsearch%3Fk%3Dbasketball&psig=AOvVaw3iZNWMqRHCRfHsDcJtv38Z&ust=1685470979953000&source=images&cd=vfe&ved=0CA4QjRxqFwoTCLCt4cXlmv8CFQAAAAAdAAAAABAE"
                 print(item)
                 leaguesArray.append(league)
+            }
+            
+        }
+        
+        else if (leagues is [CricketLeagues]) {
+            let castedLeagues = leagues as! [BasketballLeagues]
+            for item in leagues{
+                var league = LeagueViewModelCell()
+                league.name = item.name
+                league.logo = "https://www.google.com/imgres?imgurl=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F85%2Fb9%2Fb4%2F85b9b4605207163aeacdaf78aa30ecb1.jpg&tbnid=FncOf2gfLoxfmM&vet=12ahUKEwi5vpOck5v_AhV1pkwKHf4xB0cQMygOegUIARCRAg..i&imgrefurl=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F437623288797393473%2F&docid=1CyFHyuBGHVjxM&w=1600&h=1200&q=cricket%20image&client=safari&ved=2ahUKEwi5vpOck5v_AhV1pkwKHf4xB0cQMygOegUIARCRAg"
+                leaguesArray.append(league)
+            }
+        }
+            
+            else{
+                let castedLeagues = leagues as! [TennisLeagues]
+                for item in leagues{
+                    var league = LeagueViewModelCell()
+                    league.name = item.name
+                    league.logo = "https://www.google.com/imgres?imgurl=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F006%2F044%2F496%2Foriginal%2Fset-of-tennis-logos-emblems-badges-labels-and-design-elements-free-vector.jpg&tbnid=BGyqh31fgI5SOM&vet=12ahUKEwihyZC2k5v_AhUqmicCHRzVAAMQMygFegUIARD9AQ..i&imgrefurl=https%3A%2F%2Fwww.vecteezy.com%2Ffree-vector%2Ftennis-logo&docid=WdN0l5bHR4D9AM&w=1920&h=1920&q=tennis%20image&client=safari&ved=2ahUKEwihyZC2k5v_AhUqmicCHRzVAAMQMygFegUIARD9AQ"
+                    leaguesArray.append(league)
+                
             }
             
         }
@@ -111,81 +111,7 @@ class LeagueViewModel {
         
     }
   
-    
-    
-    //    func addFootballResultsToArray(leagues: FootballLeaguesJsonResult){
-    //        for item in leagues.result!{
-    //            var league = LeagueViewModelCell()
-    //            league.name = item.name
-    //            if(item.logo != ""){
-    //                league.logo = item.logo
-    //            }
-    //            else{
-    //                item.logo = "//"
-    //            }
-    //            print(item)
-    //            leaguesArray.append(league)
-    //
-    //            print(item.name)
-    //        }
-    //        isLoading = false
-    //        filteredArray = leaguesArray
-    //        numberOfCells = filteredArray.count
-    //        print(numberOfCells)
-    //
-    //
-    //    }
-    //
-    //
-    //    func getLeaguesFromApi (sportKind:String) {
-    //        self.isLoading = true
-    //
-    //        apiService.getLeaguesFromApi(compilationHandler:
-    //                                        { [weak self] (result, error )in
-    //            self?.isLoading = true
-    //            if let error = error{
-    //                print(error)
-    //                //    self?.alertMessage = error.rawValue
-    //            }
-    //            else{
-    //                print("data from api")
-    //                print(result?.result?[0].name)
-    //                self?.addResultsToArray(leagues: result!,sportKind: sportKind)
-    //            }
-    //        }, sportKind: sportKind)
-    //    }
-    //
-    //    private func addResultsToArray(leagues:LeaguesJsonResult,sportKind:String){
-    //
-    //        for item in leagues.result!{
-    //            var league = LeagueViewModelCell()
-    //            if(sportKind == "basketball"){
-    //
-    //                league.name = item.name
-    //                league.logo = "//"
-    //            }
-    //            else if(sportKind == "cricket"){
-    //
-    //                league.name = item.name
-    //                league.logo = "//"
-    //            }
-    //
-    //            else{
-    //
-    //                league.name = item.name
-    //                league.logo = "//"
-    //            }
-    //            print(item)
-    //            leaguesArray.append(league)
-    //
-    //            print(item.name)
-    //        }
-    //        numberOfCells = leaguesArray.count
-    //        print(numberOfCells)
-    //
-    //    }
-    
-    
+   
     func getResultSearch(searchedText:String){
         
         filteredArray = searchedText.isEmpty||searchedText == "" ? leaguesArray : leaguesArray.filter{
