@@ -11,14 +11,17 @@ enum ApiError:String{
     case error = "Check your Internet Connection"
 }
 let key = "081870b59e506f9793c1fcc7cb85b7117abcee183700e44ddcc5273587f2af8f"
-var leagueId:String?
+var leagueId:Int?
 var currentDate:String?
 
 protocol ApiServiceProtocol{
     
     
-    
     func getLeaguesFromApi<T:Leagues>(compilationHandler: @escaping (_ response:[T]?, ApiError?) ->(),type: T.Type) where T :Leagues
+    
+    func getLatestEventsFromApi<T:Event>(compilationHandler: @escaping (_ response:[T]?, ApiError?) ->(),type: T.Type,leagId:Int) where T :Event
+    
+    func getNowPlayingEventsFromApi<T:Event>(compilationHandler: @escaping (_ response:[T]?, ApiError?) ->(),type: T.Type,leagId:Int) where T :Event
     
 }
     
@@ -60,7 +63,7 @@ class ApiService:ApiServiceProtocol{
     
     
     
-    func getLatestEventsFromApi<T:Event>(compilationHandler: @escaping (_ response:[T]?, ApiError?) ->(),type: T.Type,leagId:String) where T :Event{
+    func getLatestEventsFromApi<T:Event>(compilationHandler: @escaping (_ response:[T]?, ApiError?) ->(),type: T.Type,leagId:Int) where T :Event{
         //url obj
         currentDate = calcTodayDate()
         leagueId = leagId
@@ -94,7 +97,7 @@ class ApiService:ApiServiceProtocol{
     }
 
    
-func getNowPlayingEventsFromApi<T:Event>(compilationHandler: @escaping (_ response:[T]?, ApiError?) ->(),type: T.Type,leagId:String) where T :Event{
+func getNowPlayingEventsFromApi<T:Event>(compilationHandler: @escaping (_ response:[T]?, ApiError?) ->(),type: T.Type,leagId:Int) where T :Event{
     //url obj
     currentDate = calcTodayDate()
     leagueId = leagId
@@ -129,7 +132,7 @@ func getNowPlayingEventsFromApi<T:Event>(compilationHandler: @escaping (_ respon
 
     
     
- func getTeamsFromApi<T:Team>(compilationHandler: @escaping (_ response:[T]?, ApiError?) ->(),type: T.Type,leagId:String) where T :Team{
+ func getTeamsFromApi<T:Team>(compilationHandler: @escaping (_ response:[T]?, ApiError?) ->(),type: T.Type,leagId:Int) where T :Team{
      //url obj
      leagueId = leagId
      let url:URL? = URL(string:type.url)

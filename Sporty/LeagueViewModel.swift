@@ -110,6 +110,7 @@ class LeagueViewModel {
         print(numberOfCells)
         
     }
+  
     
     
     //    func addFootballResultsToArray(leagues: FootballLeaguesJsonResult){
