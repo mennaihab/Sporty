@@ -125,8 +125,8 @@ class LeagueDetailsViewController: UICollectionViewController {
 //                 return cell
             
                  let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as!LeagueDetailsViewCell
-                 return cell
-          
+    
+          return cell
           //   }
         // Configure the cell
     

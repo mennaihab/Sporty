@@ -9,7 +9,7 @@ import UIKit
 
 class LeagueViewController: UITableViewController {
     
-    var filteredData : [String]!
+    //var filteredData : [String]!
     @IBOutlet weak var searchbar: UISearchBar!
     lazy var viewModel: LeagueViewModel = {
         return LeagueViewModel()

@@ -12,10 +12,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="gTV-IL-0wX" customClass="LeagueDetailsViewCell" customModule="Sporty" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="360" height="125"/>
+            <rect key="frame" x="0.0" y="0.0" width="361" height="133"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="360" height="125"/>
+                <rect key="frame" x="0.0" y="0.0" width="361" height="133"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="basketball.png" translatesAutoresizingMaskIntoConstraints="NO" id="qot-y7-Y01">
@@ -26,38 +26,38 @@
                         </constraints>
                     </imageView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="basketball.png" translatesAutoresizingMaskIntoConstraints="NO" id="G9U-7e-drx">
-                        <rect key="frame" x="266" y="13" width="80" height="54"/>
+                        <rect key="frame" x="267" y="13" width="80" height="54"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="80" id="NS6-k7-iyK"/>
                             <constraint firstAttribute="height" constant="54" id="vYB-bF-9cE"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="naO-Nb-sHi">
-                        <rect key="frame" x="159" y="10" width="42" height="21"/>
+                        <rect key="frame" x="159" y="10" width="43" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X74-jp-QYX">
-                        <rect key="frame" x="158" y="46" width="42" height="21"/>
+                        <rect key="frame" x="158" y="46" width="43" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vcK-7d-NNZ">
-                        <rect key="frame" x="159" y="77" width="42" height="48"/>
+                        <rect key="frame" x="160" y="77" width="42" height="56"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9E4-F3-1BP">
-                        <rect key="frame" x="13" y="84" width="86" height="21"/>
+                        <rect key="frame" x="13" y="84" width="87" height="29"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BHF-L3-LN8">
-                        <rect key="frame" x="260" y="84" width="92" height="21"/>
+                        <rect key="frame" x="261" y="84" width="41.333333333333314" height="29"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -72,7 +72,6 @@
                 <constraint firstItem="naO-Nb-sHi" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="He9-B9-qID"/>
                 <constraint firstItem="ZTg-uK-7eu" firstAttribute="top" secondItem="qot-y7-Y01" secondAttribute="top" constant="48" id="JTu-aZ-qzk"/>
                 <constraint firstItem="G9U-7e-drx" firstAttribute="leading" secondItem="BHF-L3-LN8" secondAttribute="leading" constant="6" id="Qgn-5D-K2T"/>
-                <constraint firstAttribute="trailing" secondItem="BHF-L3-LN8" secondAttribute="trailing" constant="8" id="SCy-Bm-M48"/>
                 <constraint firstItem="G9U-7e-drx" firstAttribute="top" secondItem="naO-Nb-sHi" secondAttribute="bottom" constant="-18" id="Xl1-cU-Hzk"/>
                 <constraint firstItem="G9U-7e-drx" firstAttribute="leading" secondItem="naO-Nb-sHi" secondAttribute="trailing" constant="65" id="ZAX-JE-he2"/>
                 <constraint firstAttribute="bottom" secondItem="9E4-F3-1BP" secondAttribute="bottom" constant="20" id="cF7-dg-b28"/>
@@ -91,7 +90,7 @@
                 <constraint firstItem="BHF-L3-LN8" firstAttribute="leading" secondItem="vcK-7d-NNZ" secondAttribute="trailing" constant="59" id="vm1-2n-kc7"/>
                 <constraint firstItem="9E4-F3-1BP" firstAttribute="top" secondItem="qot-y7-Y01" secondAttribute="bottom" constant="19" id="wJI-hP-XDc"/>
             </constraints>
-            <size key="customSize" width="360" height="125"/>
+            <size key="customSize" width="361" height="133"/>
             <connections>
                 <outlet property="finalResult" destination="naO-Nb-sHi" id="em2-CQ-pAn"/>
                 <outlet property="firstTeamImage" destination="qot-y7-Y01" id="k3i-Ox-hi2"/>
@@ -101,7 +100,7 @@
                 <outlet property="secondTeamImage" destination="G9U-7e-drx" id="vFM-jv-m2R"/>
                 <outlet property="secondTeamName" destination="BHF-L3-LN8" id="p6S-en-F5f"/>
             </connections>
-            <point key="canvasLocation" x="298" y="16"/>
+            <point key="canvasLocation" x="298.47328244274809" y="18.661971830985916"/>
         </collectionViewCell>
     </objects>
     <resources>
