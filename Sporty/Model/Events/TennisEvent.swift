@@ -9,7 +9,7 @@ import Foundation
 
 struct TennisEvent:Event{
     
-    static let NowPlayingUrl = "https://apiv2.allsportsapi.com/tennis/?met=Livescore&APIkey=\(key)&leagueId=\(leagueId!)"
+    static let NowPlayingUrl = "https://apiv2.allsportsapi.com/tennis/?met=Fixtures&APIkey=\(key)&from=2023-06-05&to=2024-06-05&leagueId=\(leagueId!)"
     
     static let LatestUrl = "https://apiv2.allsportsapi.com/tennis/?met=Fixtures&APIkey=\(key)&from=2021-06-17&to=\(currentDate!)&leagueId=\(leagueId!)"
     

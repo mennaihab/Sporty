@@ -69,7 +69,7 @@ class LeagueViewController: UITableViewController {
                 if let isLoading = self?.viewModel.isLoading {
                     if isLoading {
                         self?.networkIndicator.startAnimating()
-                        UIView.animate(withDuration: 0.2, animations: {
+                        UIView.animate(withDuration: 0.7, animations: {
                     
                         })
                     }else {
@@ -106,10 +106,24 @@ class LeagueViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! LeagueTableViewCell
-        cell.leagueName.text = viewModel.filteredArray[indexPath.row].name
-        cell.leagueImage.sd_setImage(with: URL(string: viewModel.filteredArray[indexPath.row].logo ?? "" ), placeholderImage: UIImage(named: "basketball.png"))
         
-        cell.leagueImage.image = UIImage(named: "basketball.png")
+        cell.leagueName.text = viewModel.filteredArray[indexPath.row].name
+        if(sportType == "football"){
+            cell.leagueImage.sd_setImage(with: URL(string: viewModel.filteredArray[indexPath.row].logo ?? "" ), placeholderImage: UIImage(named: "football.png"))
+        }
+        else if (sportType == "basketball"){
+            cell.leagueImage.sd_setImage(with: URL(string: viewModel.filteredArray[indexPath.row].logo ?? "" ), placeholderImage: UIImage(named: "basketball.png"))
+            
+        }
+        else if(sportType == "cricket"){
+            cell.leagueImage.sd_setImage(with: URL(string: viewModel.filteredArray[indexPath.row].logo ?? ""), placeholderImage: UIImage(named: "cricket.png"))
+            
+        }
+        else{
+            cell.leagueImage.sd_setImage(with: URL(string: viewModel.filteredArray[indexPath.row].logo ?? ""), placeholderImage: UIImage(named: "tennis.png"))
+            
+        }
+ 
         print(indexPath)
         return cell
     }
@@ -118,6 +132,14 @@ class LeagueViewController: UITableViewController {
         cell.contentView.backgroundColor = UIColor.orange
         cell.contentView.layer.cornerRadius = 40
         cell.contentView.clipsToBounds = true
+    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "leagueDetails") as! LeagueAllDetailsViewController
+        vc.sportType = self.sportType
+        vc.id = viewModel.filteredArray[indexPath.row].id
+        print("sssssssssssssssssssssssssssssss")
+        print(viewModel.filteredArray[indexPath.row].id!)
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

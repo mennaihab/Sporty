@@ -38,6 +38,7 @@
 		EE313B0B2A215FD500251FBC /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE313B0A2A215FD500251FBC /* HeaderCollectionReusableView.swift */; };
 		EE313B0E2A2187F900251FBC /* TeamDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE313B0D2A2187F900251FBC /* TeamDetailsViewController.swift */; };
 		EE313B112A21883C00251FBC /* TeamDetailsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE313B0F2A21883C00251FBC /* TeamDetailsViewCell.swift */; };
+		EE3188272A253D4900FD72E3 /* LeagueTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE3188262A253D4900FD72E3 /* LeagueTableViewCell.xib */; };
 		EE35D3952A238E97002DB0A1 /* LeagueDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE35D3942A238E97002DB0A1 /* LeagueDetailsViewModel.swift */; };
 		EE5C40092A1A9E52008EA0F6 /* SportsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE5C40082A1A9E52008EA0F6 /* SportsCollectionViewCell.swift */; };
 		EE5C400B2A1AAA8A008EA0F6 /* basketball.png in Resources */ = {isa = PBXBuildFile; fileRef = EE5C400A2A1AAA8A008EA0F6 /* basketball.png */; };
@@ -46,7 +47,6 @@
 		EE5C40112A1AC836008EA0F6 /* cricket.png in Resources */ = {isa = PBXBuildFile; fileRef = EE5C400E2A1AC836008EA0F6 /* cricket.png */; };
 		EE67AF842A1BB04500B198CE /* FavouritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE67AF832A1BB04500B198CE /* FavouritesTableViewController.swift */; };
 		EE67AF8B2A1BCE9D00B198CE /* LeagueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE67AF892A1BCE9D00B198CE /* LeagueTableViewCell.swift */; };
-		EE67AF8C2A1BCE9D00B198CE /* LeagueTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE67AF8A2A1BCE9D00B198CE /* LeagueTableViewCell.xib */; };
 		EE67AF912A1BFF9300B198CE /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE67AF902A1BFF9300B198CE /* ApiService.swift */; };
 		EE8960092A2266DE00D0A0D6 /* LeagueAllDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8960082A2266DE00D0A0D6 /* LeagueAllDetailsViewController.swift */; };
 		EEE4D9A62A20036E00C41B76 /* ApiResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE4D9A52A20036E00C41B76 /* ApiResponseModel.swift */; };
@@ -54,6 +54,8 @@
 		EEE4D9AB2A20096E00C41B76 /* BasketballLeagues.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE4D9AA2A20096E00C41B76 /* BasketballLeagues.swift */; };
 		EEE4D9AD2A20099A00C41B76 /* CricketLeagues.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE4D9AC2A20099A00C41B76 /* CricketLeagues.swift */; };
 		EEE4D9AF2A2009AD00C41B76 /* TennisLeagues.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE4D9AE2A2009AD00C41B76 /* TennisLeagues.swift */; };
+		EEFDC5492A2570200078AF30 /* TeamViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFDC5472A2570200078AF30 /* TeamViewCell.swift */; };
+		EEFDC54A2A2570200078AF30 /* TeamViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEFDC5482A2570200078AF30 /* TeamViewCell.xib */; };
 		F26A0C272E0AC6C143906950 /* Pods_Sporty_SportyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9318653AF533730F19F4B3D9 /* Pods_Sporty_SportyUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -117,6 +119,7 @@
 		EE313B0A2A215FD500251FBC /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		EE313B0D2A2187F900251FBC /* TeamDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailsViewController.swift; sourceTree = "<group>"; };
 		EE313B0F2A21883C00251FBC /* TeamDetailsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailsViewCell.swift; sourceTree = "<group>"; };
+		EE3188262A253D4900FD72E3 /* LeagueTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeagueTableViewCell.xib; sourceTree = "<group>"; };
 		EE35D3942A238E97002DB0A1 /* LeagueDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueDetailsViewModel.swift; sourceTree = "<group>"; };
 		EE5C40082A1A9E52008EA0F6 /* SportsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsCollectionViewCell.swift; sourceTree = "<group>"; };
 		EE5C400A2A1AAA8A008EA0F6 /* basketball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = basketball.png; sourceTree = "<group>"; };
@@ -125,7 +128,6 @@
 		EE5C400E2A1AC836008EA0F6 /* cricket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cricket.png; sourceTree = "<group>"; };
 		EE67AF832A1BB04500B198CE /* FavouritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesTableViewController.swift; sourceTree = "<group>"; };
 		EE67AF892A1BCE9D00B198CE /* LeagueTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueTableViewCell.swift; sourceTree = "<group>"; };
-		EE67AF8A2A1BCE9D00B198CE /* LeagueTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LeagueTableViewCell.xib; sourceTree = "<group>"; };
 		EE67AF902A1BFF9300B198CE /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		EE8960082A2266DE00D0A0D6 /* LeagueAllDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueAllDetailsViewController.swift; sourceTree = "<group>"; };
 		EEE4D9A52A20036E00C41B76 /* ApiResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResponseModel.swift; sourceTree = "<group>"; };
@@ -133,6 +135,8 @@
 		EEE4D9AA2A20096E00C41B76 /* BasketballLeagues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketballLeagues.swift; sourceTree = "<group>"; };
 		EEE4D9AC2A20099A00C41B76 /* CricketLeagues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CricketLeagues.swift; sourceTree = "<group>"; };
 		EEE4D9AE2A2009AD00C41B76 /* TennisLeagues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TennisLeagues.swift; sourceTree = "<group>"; };
+		EEFDC5472A2570200078AF30 /* TeamViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamViewCell.swift; sourceTree = "<group>"; };
+		EEFDC5482A2570200078AF30 /* TeamViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +210,8 @@
 				EE313B0A2A215FD500251FBC /* HeaderCollectionReusableView.swift */,
 				EE8960082A2266DE00D0A0D6 /* LeagueAllDetailsViewController.swift */,
 				EE35D3942A238E97002DB0A1 /* LeagueDetailsViewModel.swift */,
+				EEFDC5472A2570200078AF30 /* TeamViewCell.swift */,
+				EEFDC5482A2570200078AF30 /* TeamViewCell.xib */,
 			);
 			name = LeagueDetails;
 			sourceTree = "<group>";
@@ -283,8 +289,8 @@
 		EE27C1942A1A849B006CF044 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EE3188262A253D4900FD72E3 /* LeagueTableViewCell.xib */,
 				EE67AF892A1BCE9D00B198CE /* LeagueTableViewCell.swift */,
-				EE67AF8A2A1BCE9D00B198CE /* LeagueTableViewCell.xib */,
 				EE27C1672A1A7962006CF044 /* Main.storyboard */,
 			);
 			path = View;
@@ -406,7 +412,7 @@
 				EE27C15A2A1A7962006CF044 /* Sources */,
 				EE27C15B2A1A7962006CF044 /* Frameworks */,
 				EE27C15C2A1A7962006CF044 /* Resources */,
-				EFC24CB8982A111F53B6186F /* [CP] Embed Pods Frameworks */,
+				5680BB15E07D7D16CEF1A31D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -444,7 +450,7 @@
 				EE27C17D2A1A7963006CF044 /* Sources */,
 				EE27C17E2A1A7963006CF044 /* Frameworks */,
 				EE27C17F2A1A7963006CF044 /* Resources */,
-				7DCC2EA5366DE9772F14F22E /* [CP] Embed Pods Frameworks */,
+				A91B8094099221029F90A895 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -506,13 +512,14 @@
 			files = (
 				EE5C400F2A1AC836008EA0F6 /* football.png in Resources */,
 				EE313B072A212DA700251FBC /* LeagueDetailsViewCell.xib in Resources */,
-				EE67AF8C2A1BCE9D00B198CE /* LeagueTableViewCell.xib in Resources */,
 				EE5C40112A1AC836008EA0F6 /* cricket.png in Resources */,
 				EE27C1712A1A7963006CF044 /* LaunchScreen.storyboard in Resources */,
 				EE27C16E2A1A7963006CF044 /* Assets.xcassets in Resources */,
+				EEFDC54A2A2570200078AF30 /* TeamViewCell.xib in Resources */,
 				EE5C400B2A1AAA8A008EA0F6 /* basketball.png in Resources */,
 				EE5C40102A1AC836008EA0F6 /* tennis.png in Resources */,
 				EE27C1692A1A7962006CF044 /* Main.storyboard in Resources */,
+				EE3188272A253D4900FD72E3 /* LeagueTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,6 +584,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		5680BB15E07D7D16CEF1A31D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sporty/Pods-Sporty-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sporty/Pods-Sporty-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Sporty/Pods-Sporty-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6D29CC93D5162C0E1CAF5BD5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -599,7 +623,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7DCC2EA5366DE9772F14F22E /* [CP] Embed Pods Frameworks */ = {
+		A91B8094099221029F90A895 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -614,23 +638,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Sporty-SportyUITests/Pods-Sporty-SportyUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EFC24CB8982A111F53B6186F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Sporty/Pods-Sporty-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Sporty/Pods-Sporty-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Sporty/Pods-Sporty-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -671,6 +678,7 @@
 				EEE4D9AD2A20099A00C41B76 /* CricketLeagues.swift in Sources */,
 				EE35D3952A238E97002DB0A1 /* LeagueDetailsViewModel.swift in Sources */,
 				EE30C4E42A20D0FF00F35C09 /* FootballEvent.swift in Sources */,
+				EEFDC5492A2570200078AF30 /* TeamViewCell.swift in Sources */,
 				EE2728B92A1CEB26002F89B8 /* LeagueViewModel.swift in Sources */,
 				EE30C4EA2A20D13000F35C09 /* TennisEvent.swift in Sources */,
 			);

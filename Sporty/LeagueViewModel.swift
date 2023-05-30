@@ -60,50 +60,28 @@ class LeagueViewModel {
             let castedLeagues = leagues as! [FootballLeagues]
             for item in castedLeagues{
                 var league = LeagueViewModelCell()
+                league.id = item.id
                 league.name = item.name
                 league.logo = item.logo
-                if(item.logo == nil)
-                {
-                    league.logo = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fpixabay.com%2Fimages%2Fsearch%2Ffootball%2F&psig=AOvVaw0ZmhzCWWUmEtKOSHvHMiKS&ust=1685470805139000&source=images&cd=vfe&ved=0CA4QjRxqFwoTCMjCzYPlmv8CFQAAAAAdAAAAABAE"
-                }
-                print(item)
                 leaguesArray.append(league)
-                
             }
         }
-        else if (leagues is [BasketballLeagues]) {
-            let castedLeagues = leagues as! [BasketballLeagues]
+               
+        else {
+         
             for item in leagues{
                 var league = LeagueViewModelCell()
+                league.id = item.id
                 league.name = item.name
-                league.logo = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fstock.adobe.com%2Fsearch%3Fk%3Dbasketball&psig=AOvVaw3iZNWMqRHCRfHsDcJtv38Z&ust=1685470979953000&source=images&cd=vfe&ved=0CA4QjRxqFwoTCLCt4cXlmv8CFQAAAAAdAAAAABAE"
                 print(item)
                 leaguesArray.append(league)
             }
             
         }
         
-        else if (leagues is [CricketLeagues]) {
-            let castedLeagues = leagues as! [BasketballLeagues]
-            for item in leagues{
-                var league = LeagueViewModelCell()
-                league.name = item.name
-                league.logo = "https://www.google.com/imgres?imgurl=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F85%2Fb9%2Fb4%2F85b9b4605207163aeacdaf78aa30ecb1.jpg&tbnid=FncOf2gfLoxfmM&vet=12ahUKEwi5vpOck5v_AhV1pkwKHf4xB0cQMygOegUIARCRAg..i&imgrefurl=https%3A%2F%2Fwww.pinterest.com%2Fpin%2F437623288797393473%2F&docid=1CyFHyuBGHVjxM&w=1600&h=1200&q=cricket%20image&client=safari&ved=2ahUKEwi5vpOck5v_AhV1pkwKHf4xB0cQMygOegUIARCRAg"
-                leaguesArray.append(league)
-            }
-        }
+       
             
-            else{
-                let castedLeagues = leagues as! [TennisLeagues]
-                for item in leagues{
-                    var league = LeagueViewModelCell()
-                    league.name = item.name
-                    league.logo = "https://www.google.com/imgres?imgurl=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F006%2F044%2F496%2Foriginal%2Fset-of-tennis-logos-emblems-badges-labels-and-design-elements-free-vector.jpg&tbnid=BGyqh31fgI5SOM&vet=12ahUKEwihyZC2k5v_AhUqmicCHRzVAAMQMygFegUIARD9AQ..i&imgrefurl=https%3A%2F%2Fwww.vecteezy.com%2Ffree-vector%2Ftennis-logo&docid=WdN0l5bHR4D9AM&w=1920&h=1920&q=tennis%20image&client=safari&ved=2ahUKEwihyZC2k5v_AhUqmicCHRzVAAMQMygFegUIARD9AQ"
-                    leaguesArray.append(league)
-                
-            }
-            
-        }
+        
         isLoading = false
         filteredArray = leaguesArray
         numberOfCells = filteredArray.count
@@ -123,6 +101,7 @@ class LeagueViewModel {
 
 
 struct LeagueViewModelCell{
+    var id: Int?
     var name :String?
     var logo:String?
 }

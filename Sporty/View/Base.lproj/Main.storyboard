@@ -325,7 +325,7 @@
         <!--League All Details View Controller-->
         <scene sceneID="I7b-OG-KpN">
             <objects>
-                <viewController id="4Es-3w-FeJ" customClass="LeagueAllDetailsViewController" customModule="Sporty" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="leagueDetails" id="4Es-3w-FeJ" customClass="LeagueAllDetailsViewController" customModule="Sporty" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Djl-Xw-8CF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

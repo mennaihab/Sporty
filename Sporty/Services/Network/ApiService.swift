@@ -21,7 +21,10 @@ protocol ApiServiceProtocol{
     
     func getLatestEventsFromApi<T:Event>(compilationHandler: @escaping (_ response:[T]?, ApiError?) ->(),type: T.Type,leagId:Int) where T :Event
     
-    func getNowPlayingEventsFromApi<T:Event>(compilationHandler: @escaping (_ response:[T]?, ApiError?) ->(),type: T.Type,leagId:Int) where T :Event
+    func getUpComingEventsFromApi<T:Event>(compilationHandler: @escaping (_ response:[T]?, ApiError?) ->(),type: T.Type,leagId:Int) where T :Event
+    
+    func getTeamsFromApi<T:Team>(compilationHandler: @escaping (_ response:[T]?, ApiError?) ->(),type: T.Type,leagId:Int) where T :Team
+    
     
 }
     
@@ -67,6 +70,7 @@ class ApiService:ApiServiceProtocol{
         //url obj
         currentDate = calcTodayDate()
         leagueId = leagId
+        print(leagueId)
         let url:URL? = URL(string:type.LatestUrl)
         //if i want to make post/get ,mofify it from request
         let request = URLRequest(url: url!)
@@ -97,7 +101,7 @@ class ApiService:ApiServiceProtocol{
     }
 
    
-func getNowPlayingEventsFromApi<T:Event>(compilationHandler: @escaping (_ response:[T]?, ApiError?) ->(),type: T.Type,leagId:Int) where T :Event{
+func getUpComingEventsFromApi<T:Event>(compilationHandler: @escaping (_ response:[T]?, ApiError?) ->(),type: T.Type,leagId:Int) where T :Event{
     //url obj
     currentDate = calcTodayDate()
     leagueId = leagId
