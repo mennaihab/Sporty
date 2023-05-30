@@ -10,7 +10,7 @@ func calcTodayDate()->String{
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = "yyyy-MM-dd"
     let currentDate = dateFormatter.string(from: Date())
-    
+
     print(currentDate)
     return currentDate
 }

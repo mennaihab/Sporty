@@ -16,75 +16,109 @@ var isLoading: Bool = false {
         updateIndicatorClosure?()
     }
 }
-var LatestArray : [LatestViewModelCell] = []
-    var upComingArray:[LatestViewModelCell] = []
+var LatestArray : [EventViewModelCell] = []
+var upComingArray:[EventViewModelCell] = []
+var teamsArray:[TeamsViewModelCell] = []
 
-var numberOfCells: Int = 0 {
-    
-    
+var numberOfLatestCells: Int = 0 {
+
     didSet {
-        reloadTableViewClosure?()
+        reloadLatestClosure?()
         
     }
     
 }
     
-    var numberOfUpcomingCells: Int = 0 {
+    var numberOfUpComingCells: Int = 0 {
+
         didSet {
-            reloadTableViewClosure?()
+            reloadUpComingClosure?()
             
         }
         
     }
+    
+    
+    var numberOfTeamsCells: Int = 0 {
+
+        didSet {
+            reloadteamsClosure?()
+            
+        }
+        
+    }
+    
+   
 
 
 //closures
 var updateIndicatorClosure: (()->())?
-var  reloadTableViewClosure: (()->())?
+var  reloadUpComingClosure: (()->())?
+    var  reloadLatestClosure: (()->())?
+    var  reloadteamsClosure: (()->())?
 
 
-    func getLatestFromApi<T:Event>(type:T.Type,leagId:Int)
-where T : Event
-{
-    self.isLoading = true
-    apiService.getLatestEventsFromApi(compilationHandler: { [weak self] (result, error ) in
-        self?.isLoading = true
-        if let error = error{
-            print(error)
-            //    self?.alertMessage = error.rawValue
-        }
-        else{
-            
-            self?.addResultsToArray(events: result!)
-        }
-        
-    }, type:type,leagId:leagId)
-}
 
     
     func getUpComingFromApi<T:Event>(type:T.Type,leagId:Int)
 where T : Event
 {
     self.isLoading = true
-    apiService.getNowPlayingEventsFromApi(compilationHandler: { [weak self] (result, error ) in
-        self?.isLoading = true
+    apiService.getUpComingEventsFromApi(compilationHandler: { [weak self] (result, error ) in
+       // self?.isLoading = false
         if let error = error{
             print(error)
             //    self?.alertMessage = error.rawValue
         }
         else{
             
-            self?.addResultsToArray(events: result!)
+            self?.addResultsToUpComingArray(events: result!)
+        }
+        
+    }, type:type,leagId:leagId)
+}
+    
+    func getLatestFromApi<T:Event>(type:T.Type,leagId:Int)
+where T : Event
+{
+    self.isLoading = true
+    apiService.getLatestEventsFromApi(compilationHandler: { [weak self] (result, error ) in
+        //self?.isLoading = true
+        if let error = error{
+            print(error)
+            //    self?.alertMessage = error.rawValue
+        }
+        else{
+            
+            self?.addResultsToLatestArray(events: result!)
+        }
+        
+    }, type:type,leagId:leagId)
+}
+    
+    func getTeamsFromApi<T:Team>(type:T.Type,leagId:Int)
+where T : Team
+{
+    self.isLoading = true
+    apiService.getTeamsFromApi(compilationHandler: { [weak self] (result, error ) in
+       // self?.isLoading = true
+        if let error = error{
+            print(error)
+            //    self?.alertMessage = error.rawValue
+        }//
+        else{
+            
+            self?.addResultsToTeamsArray(teams: result!)
         }
         
     }, type:type,leagId:leagId)
 }
 
 
-func addResultsToArray(events:[Event]){
+func addResultsToLatestArray(events:[Event]){
 
     for item in events{
-        var event = LatestViewModelCell()
+        var event = EventViewModelCell()
         event.firstTeam = item.firstTeam
         event.secondTeam = item.secondTeam
         event.date = item.date
@@ -92,38 +126,61 @@ func addResultsToArray(events:[Event]){
         event.firstTemaLogo = item.firstTemaLogo
         event.secondTeamLogo = item.secondTeamLogo
         event.gameResult = item.gameResult
-        
-        
-        
-        if(events is [FootballEvent]){
-            if event.firstTemaLogo == nil
-            {
-                event.firstTemaLogo = "/"
-            }
-            if event.secondTeamLogo == nil {
-                event.firstTemaLogo = "/"
-            }
-            
-        }
-        
-        if(events is [BasketballEvent])
-        {
-            
-        }
         LatestArray.append(event)
     }
   
     isLoading = false
-    numberOfCells = LatestArray.count
-    print(numberOfCells)
+    numberOfLatestCells = LatestArray.count
+    print(numberOfLatestCells)
+    
+}
+    
+    
+    
+    func addResultsToUpComingArray(events:[Event]){
+
+        for item in events{
+            var event = EventViewModelCell()
+            event.firstTeam = item.firstTeam
+            event.secondTeam = item.secondTeam
+            event.date = item.date
+            event.time = item.time
+            event.firstTemaLogo = item.firstTemaLogo
+            event.secondTeamLogo = item.secondTeamLogo
+            event.gameResult = item.gameResult
+            upComingArray.append(event)
+        }
+      
+        isLoading = false
+        numberOfUpComingCells = upComingArray.count
+        print(numberOfUpComingCells)
+        
+    }
+
+
+
+
+func addResultsToTeamsArray(teams:[Team]){
+
+    for item in teams{
+        var team = TeamsViewModelCell()
+        team.id = item.id
+        team.name = item.name
+        team.logo = item.logo
+    
+        teamsArray.append(team)
+    }
+  
+    isLoading = false
+    numberOfTeamsCells = teamsArray.count
+    print(numberOfTeamsCells)
     
 }
 
 }
 
 
-
-struct LatestViewModelCell{
+struct EventViewModelCell{
     var date:String?
     var time:String?
     var firstTeam:String?
@@ -131,6 +188,14 @@ struct LatestViewModelCell{
     var firstTemaLogo:String?
     var secondTeamLogo:String?
     var gameResult:String?
+
+}
+
+struct TeamsViewModelCell{
+    var id:Int?
+    var name:String?
+    var logo:String?
+    
 
 }
 
