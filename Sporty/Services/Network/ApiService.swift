@@ -11,7 +11,6 @@ enum ApiError:String{
     case error = "Check your Internet Connection"
 }
 let key = "081870b59e506f9793c1fcc7cb85b7117abcee183700e44ddcc5273587f2af8f"
-var leagueId:Int?
 var currentDate:String?
 
 protocol ApiServiceProtocol{
@@ -25,6 +24,7 @@ protocol ApiServiceProtocol{
     
     func getTeamsFromApi<T:Team>(compilationHandler: @escaping (_ response:[T]?, ApiError?) ->(),type: T.Type,leagId:Int) where T :Team
     
+    func getTeamDetailsFromApi<T:Team>(compilationHandler: @escaping (_ response:[T]?, ApiError?) ->(),type: T.Type,teamId:Int) where T :Team
     
 }
     
@@ -66,12 +66,12 @@ class ApiService:ApiServiceProtocol{
     
     
     
-    func getLatestEventsFromApi<T:Event>(compilationHandler: @escaping (_ response:[T]?, ApiError?) ->(),type: T.Type,leagId:Int) where T :Event{
+    func getLatestEventsFromApi<T:Event>(compilationHandler: @escaping (_ response:[T]?, ApiError?) ->(),type: T.Type,leagId:Int) {
         //url obj
         currentDate = calcTodayDate()
-        leagueId = leagId
-        print(leagueId)
-        let url:URL? = URL(string:type.LatestUrl)
+        print("id called on network")
+        //print(leagueId)
+        let url:URL? = URL(string:type.LatestUrl+"to=\(currentDate!)&leagueId=\(leagId)")
         //if i want to make post/get ,mofify it from request
         let request = URLRequest(url: url!)
         //open session for http request
@@ -104,8 +104,7 @@ class ApiService:ApiServiceProtocol{
 func getUpComingEventsFromApi<T:Event>(compilationHandler: @escaping (_ response:[T]?, ApiError?) ->(),type: T.Type,leagId:Int) where T :Event{
     //url obj
     currentDate = calcTodayDate()
-    leagueId = leagId
-    let url:URL? = URL(string:type.NowPlayingUrl)
+    let url:URL? = URL(string:type.NowPlayingUrl+"leagueId=\(leagId)")
     //if i want to make post/get ,mofify it from request
     let request = URLRequest(url: url!)
     //open session for http request
@@ -138,8 +137,7 @@ func getUpComingEventsFromApi<T:Event>(compilationHandler: @escaping (_ response
     
  func getTeamsFromApi<T:Team>(compilationHandler: @escaping (_ response:[T]?, ApiError?) ->(),type: T.Type,leagId:Int) where T :Team{
      //url obj
-     leagueId = leagId
-     let url:URL? = URL(string:type.url)
+     let url:URL? = URL(string:type.url+"leagueId=\(leagId)")
      //if i want to make post/get ,mofify it from request
      let request = URLRequest(url: url!)
      //open session for http request
@@ -169,7 +167,7 @@ func getUpComingEventsFromApi<T:Event>(compilationHandler: @escaping (_ response
  }
 
     
-    func getTeamDetailsFromApi<T:Team>(compilationHandler: @escaping (_ response:[T]?, ApiError?) ->(),type: T.Type,teamId:String) where T :Team{
+    func getTeamDetailsFromApi<T:Team>(compilationHandler: @escaping (_ response:[T]?, ApiError?) ->(),type: T.Type,teamId:Int) where T :Team{
         //url obj
         let url:URL? = URL(string:"https://apiv2.allsportsapi.com/football/?&met=Teams&teamId=\(teamId)&APIkey=\(key)")
         //if i want to make post/get ,mofify it from request

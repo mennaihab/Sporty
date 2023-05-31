@@ -8,7 +8,7 @@
 import Foundation
 
 struct BasketballTeam:Team{
-    static let url: String = "https://apiv2.allsportsapi.com/basketball/?&met=Teams&APIkey=\(key)&leagueId=\(leagueId!)"
+    static let url: String = "https://apiv2.allsportsapi.com/basketball/?&met=Teams&APIkey=\(key)&"
     var id: Int?
     
     var name: String?

@@ -127,10 +127,13 @@ func addResultsToLatestArray(events:[Event]){
         event.secondTeamLogo = item.secondTeamLogo
         event.gameResult = item.gameResult
         LatestArray.append(event)
+        print("array count")
+        print(LatestArray.count)
     }
   
     isLoading = false
     numberOfLatestCells = LatestArray.count
+    print("number of cells from view model")
     print(numberOfLatestCells)
     
 }
@@ -153,7 +156,7 @@ func addResultsToLatestArray(events:[Event]){
       
         isLoading = false
         numberOfUpComingCells = upComingArray.count
-        print(numberOfUpComingCells)
+       // print(numberOfUpComingCells)
         
     }
 
@@ -173,7 +176,7 @@ func addResultsToTeamsArray(teams:[Team]){
   
     isLoading = false
     numberOfTeamsCells = teamsArray.count
-    print(numberOfTeamsCells)
+    //print(numberOfTeamsCells)
     
 }
 

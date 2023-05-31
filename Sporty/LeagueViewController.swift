@@ -136,8 +136,8 @@ class LeagueViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "leagueDetails") as! LeagueAllDetailsViewController
         vc.sportType = self.sportType
-        vc.id = viewModel.filteredArray[indexPath.row].id
-        print("sssssssssssssssssssssssssssssss")
+        vc.id = viewModel.filteredArray[indexPath.row].id!
+        print("id from leagues table")
         print(viewModel.filteredArray[indexPath.row].id!)
         navigationController?.pushViewController(vc, animated: true)
     }

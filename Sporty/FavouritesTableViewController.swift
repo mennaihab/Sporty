@@ -6,16 +6,42 @@
 //
 
 import UIKit
+import CoreData
 
 class FavouritesTableViewController: UITableViewController {
+    
+    var context : NSManagedObjectContext?
+    
+    lazy var viewModel: FavouriteaviewModel = {
+        return FavouriteaviewModel()
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableView.register(UINib(nibName: "LeagueTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
         tableView.separatorColor = UIColor.clear
-       // tableView.separatorInset = UIEdgeInsets.zero
-         //      tableView.layoutMargins = UIEdgeInsets.zero
         
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        context = appDelegate.persistentContainer.viewContext
+        observeViewModel()
+  
+        
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel.fetchFavourites(context:context!)
+    }
+    
+    
+    func observeViewModel(){
+        viewModel.updateTableClosure = { [weak self] () in
+            DispatchQueue.main.async {
+                self?.tableView.reloadData()
+                
+            }
+            
+        }
     }
 
     // MARK: - Table view data source
@@ -27,7 +53,7 @@ class FavouritesTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 5
+        return viewModel.numberOfCells
     }
 
     
@@ -35,10 +61,8 @@ class FavouritesTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         as! LeagueTableViewCell
        
-        cell.leagueName.text = "basketball"
-        print("dmbfj")
-        print(cell.leagueName.text!)
-        cell.leagueImage.image = UIImage(named: "basketball.png")
+        cell.leagueName.text = viewModel.favouriteArray[indexPath.row].name
+        cell.leagueImage.sd_setImage(with: URL(string: viewModel.favouriteArray[indexPath.row].logo ?? "" ), placeholderImage: UIImage(named: "football.png"))
         return cell
     }
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -54,59 +78,43 @@ class FavouritesTableViewController: UITableViewController {
 
     }
     
-    //    override func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
-//        if let cell = tableView.cellForRow(at: indexPath){
-//            cell.contentView.backgroundColor = UIColor.orange
-//        }
-//
-//    }
-    
-    
-       
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "teamDetails") as! TeamDetailsViewController
+        vc.id = viewModel.favouriteArray[indexPath.row].id!
+        print(viewModel.favouriteArray[indexPath.row].type!)
+        print(viewModel.favouriteArray[indexPath.row].id!)
+        vc.sportType = viewModel.favouriteArray[indexPath.row].type!
+        
+        navigationController?.pushViewController(vc, animated: true)
     }
-    */
-
-    /*
-    // Override to support editing the table view.
+    
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+      if editingStyle == .delete {
+      
+        print("Deleted")
+          let fetchReq = NSFetchRequest<NSManagedObject>(entityName:"TeamData")
+               
+          if let result = try? context!.fetch(fetchReq) {
+        
+              var object:NSManagedObject = result[indexPath.row]
+              context!.delete(object)
+              
+             // viewModel.favouriteArray.remove(at: indexPath.row)
+              
+          }
+
+          do {
+              try context!.save()
+          } catch {
+              //Handle error
+          }
+//          self.tableView.deleteRows(at: [indexPath], with: .automatic)
+          viewModel.fetchFavourites(context: context!)
+         
+       //   tableView.reloadData()
+        
+      }
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
+  
 }
