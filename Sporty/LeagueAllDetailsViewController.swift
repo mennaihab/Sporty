@@ -147,7 +147,7 @@ class LeagueAllDetailsViewController: UIViewController ,UICollectionViewDelegate
             return CGSize(width: width/3, height: 150)
         }
         else{
-            return CGSize(width:160, height: 84)
+            return CGSize(width:50, height: 50)
         }
         
     }

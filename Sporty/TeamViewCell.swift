@@ -17,10 +17,10 @@ class TeamViewCell: UICollectionViewCell {
         teamLogo.layer.cornerRadius = teamLogo.frame.size.height / 2
         teamLogo.clipsToBounds = true
     }
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
 }

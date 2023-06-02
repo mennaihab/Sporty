@@ -129,7 +129,9 @@ class LeagueViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        cell.contentView.backgroundColor = UIColor.orange
+        cell.contentView.backgroundColor = UIColor.systemOrange
+        cell.contentView.layer.borderWidth = 1
+        //cell.contentView.layer.borderColor = UIColor.
         cell.contentView.layer.cornerRadius = 40
         cell.contentView.clipsToBounds = true
     }
@@ -152,17 +154,6 @@ class LeagueViewController: UITableViewController {
     
          func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
              viewModel.getResultSearch(searchedText:searchText)
-         
-//             self.filteredData = searchText.isEmpty ? viewModel.leaguesArray : viewModel.leaguesArray.filter{
-//                 $0.name!.range(of: searchText, options: .caseInsensitive) != nil
-//             }
-//
-//            // ({(dataString.: String) -> Bool in
-//              //  return dataString.range(of: searchText, options: .caseInsensitive) != nil
-//         //   })
-//
-//
-//            tableView.reloadData()
             
         }
       

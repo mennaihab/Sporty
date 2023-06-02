@@ -18,19 +18,19 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y1s-u2-iCy">
-                        <rect key="frame" x="49" y="7" width="84" height="84"/>
+                        <rect key="frame" x="47" y="7" width="50" height="50"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="84" id="QLV-WJ-tJa"/>
-                            <constraint firstAttribute="height" constant="84" id="a8P-0t-XPD"/>
+                            <constraint firstAttribute="height" constant="50" id="AkN-To-kuz"/>
+                            <constraint firstAttribute="width" secondItem="Y1s-u2-iCy" secondAttribute="height" multiplier="1:1" id="dSt-Je-TS5"/>
+                            <constraint firstAttribute="width" constant="50" id="nPo-pD-UFV"/>
                         </constraints>
                     </imageView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="Y1s-u2-iCy" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="47" id="2rQ-81-yN7"/>
-                <constraint firstAttribute="bottom" secondItem="Y1s-u2-iCy" secondAttribute="bottom" symbolic="YES" id="8uG-OV-ym9"/>
-                <constraint firstAttribute="bottom" secondItem="Y1s-u2-iCy" secondAttribute="bottom" constant="8" id="eWC-P1-3K2"/>
+                <constraint firstItem="Y1s-u2-iCy" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="47" id="VXC-Us-adf"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="top" secondItem="Y1s-u2-iCy" secondAttribute="top" constant="52" id="tae-E9-q7e"/>
             </constraints>
             <size key="customSize" width="199" height="99"/>
             <connections>

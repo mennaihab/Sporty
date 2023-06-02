@@ -25,7 +25,7 @@ class HomeViewController: UIViewController ,UICollectionViewDelegate,UICollectio
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell" ,for:indexPath as! IndexPath) as! SportsCollectionViewCell
         cell.sportName.text = sprortsNames[indexPath.row]
         cell.sportImage.image = UIImage(named: sportsImages[indexPath.row])
-        cell.layer.borderColor = UIColor.orange.cgColor
+        cell.layer.borderColor = UIColor.systemOrange.cgColor
         cell.layer.borderWidth = 2
         cell.layer.cornerRadius = 8
         return cell
@@ -47,7 +47,7 @@ class HomeViewController: UIViewController ,UICollectionViewDelegate,UICollectio
         
     func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
         if let cell = collectionView.cellForItem(at: indexPath){
-            cell.contentView.backgroundColor = UIColor.orange
+            cell.contentView.backgroundColor = UIColor.systemOrange
         }
     }
     func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
@@ -68,8 +68,10 @@ class HomeViewController: UIViewController ,UICollectionViewDelegate,UICollectio
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        homeTitle.layer.backgroundColor = UIColor.orange.cgColor
-        homeTitle.layer.cornerRadius = 40
+        homeTitle.layer.backgroundColor = UIColor.systemOrange.cgColor
+        homeTitle.layer.borderWidth = 1
+       // homeTitle.layer.borderColor = UIColor.systemOrange.cgColor
+        homeTitle.layer.cornerRadius = 30
         homeTitle.layer.masksToBounds = true
     }
   
