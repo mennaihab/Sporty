@@ -20,6 +20,8 @@ class TeamDetailsViewController: UIViewController,UICollectionViewDelegate,UICol
     var context : NSManagedObjectContext?
     var id:Int = 0
     var sportType:String?
+    var name:String?
+    var logo:String?
     
     
     
@@ -74,7 +76,9 @@ class TeamDetailsViewController: UIViewController,UICollectionViewDelegate,UICol
             
         }
         else{
-           // viewModel.getLeaguesFromApi(type:.self)
+            
+            self.teamName.text = name
+            self.teamLogo.sd_setImage(with: URL(string: logo ?? "" ), placeholderImage: UIImage(named: "soccer-player.png"))
             
         }
     }
@@ -112,7 +116,7 @@ class TeamDetailsViewController: UIViewController,UICollectionViewDelegate,UICol
     
     func updateTeamNameAndLogo(){
         self.teamName.text = self.viewModel.teamName
-        self.teamLogo.sd_setImage(with: URL(string: viewModel.teamLogo ?? "" ), placeholderImage: UIImage(named: "football.png"))
+        self.teamLogo.sd_setImage(with: URL(string: viewModel.teamLogo ?? "" ), placeholderImage: UIImage(named: "soccer-player.png"))
     }
     
     override func viewDidLayoutSubviews() {

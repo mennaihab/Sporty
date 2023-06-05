@@ -101,46 +101,40 @@ class MockApiService{
   "success": 1,
   "result": [
     {
-      "league_key": 4,
-      "league_name": "UEFA Europa League",
-      "country_key": 1,
-      "country_name": "eurocups",
-      "league_logo": "https://apiv2.allsportsapi.com/logo/logo_leagues/",
-      "country_logo": null
+      "team_key": 1,
+      "team_name": "Los Angeles Lakers",
+      "team_logo": "https://apiv2.allsportsapi.com/logo-basketball/1_los_angeles_lakers.jpg"
     },
     {
-      "league_key": 1,
-      "league_name": "European Championship",
-      "country_key": 1,
-      "country_name": "eurocups",
-      "league_logo": null,
-      "country_logo": null
+      "team_key": 2,
+      "team_name": "Brooklyn Nets",
+      "team_logo": "https://apiv2.allsportsapi.com/logo-basketball/2_brooklyn_nets.jpg"
+    },
+    {
+      "team_key": 3,
+      "team_name": "Toronto Raptors",
+      "team_logo": "https://apiv2.allsportsapi.com/logo-basketball/3_toronto_raptors.jpg"
+    },
+    {
+      "team_key": 4,
+      "team_name": "Philadelphia 76ers",
+      "team_logo": "https://apiv2.allsportsapi.com/logo-basketball/4_philadelphia_76ers.jpg"
     }]
 }
 """
     
     
     let mockTeamDetailsResponse : String =
-"""
-{
-  "success": 1,
-  "result": [
+    """
     {
-      "league_key": 4,
-      "league_name": "UEFA Europa League",
-      "country_key": 1,
-      "country_name": "eurocups",
-      "league_logo": "https://apiv2.allsportsapi.com/logo/logo_leagues/",
-      "country_logo": null
-    },
-    {
-      "league_key": 1,
-      "league_name": "European Championship",
-      "country_key": 1,
-      "country_name": "eurocups",
-      "league_logo": null,
-      "country_logo": null
-    }]
+      "success": 1,
+      "result":[
+        {
+          "team_key": 1,
+          "team_name": "Los Angeles Lakers",
+          "team_logo": "https://apiv2.allsportsapi.com/logo-basketball/1_los_angeles_lakers.jpg"
+        }
+]
 }
 """
     
@@ -148,6 +142,10 @@ class MockApiService{
 
 
 extension MockApiService : ApiServiceProtocol{
+    func getTennisPlayersFromApi(compilationHandler: @escaping ([Sporty.TennisPlayers]?, Sporty.ApiError?) -> (), leagId: Int) {
+      
+    }
+    
 
     
  

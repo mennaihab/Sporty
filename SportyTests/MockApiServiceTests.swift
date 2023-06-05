@@ -97,8 +97,8 @@ final class MockApiServiceTests: XCTestCase {
                 XCTFail()
                 return
             }
-            XCTAssertEqual(response.count, 2, "API Faild")
-        },type: FootballTeam.self,leagId:4)
+            XCTAssertEqual(response.count, 4, "API Faild")
+        },type: BasketballTeam.self,leagId:766)
     }
     
     
@@ -112,16 +112,16 @@ final class MockApiServiceTests: XCTestCase {
            
                 
             }
-    
-    func testGetTeamDetailsFromApiShouldPass(){
+ 
+      func testGetTeamDetailsFromApiShouldPass(){
         apiService = MockApiService(shouldReturnError: false)
         apiService?.getTeamDetailsFromApi(compilationHandler: { response, error in
             guard let response = response else{
                 XCTFail()
                 return
             }
-            XCTAssertEqual(response.count, 2, "API Faild")
-        },type: FootballTeam.self,teamId:4)
+            XCTAssertEqual(response.count, 1, "API Faild")
+        },type: BasketballTeam.self,teamId:4)
     }
     
     

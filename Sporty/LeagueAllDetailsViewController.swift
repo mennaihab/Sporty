@@ -34,7 +34,15 @@ class LeagueAllDetailsViewController: UIViewController ,UICollectionViewDelegate
             return viewModel.numberOfUpComingCells
         }
         else{
-            return viewModel.numberOfTeamsCells
+            if(sportType == "tennis")
+            {
+                print("players cells")
+                return viewModel.numberOfPlayersCells
+            }
+            else{
+             
+                return viewModel.numberOfTeamsCells
+            }
         }
         
         
@@ -122,10 +130,9 @@ class LeagueAllDetailsViewController: UIViewController ,UICollectionViewDelegate
                 
             }
             else{
-                cell.teamLogo.sd_setImage(with: URL(string: viewModel.teamsArray[indexPath.row].logo ?? "" ),  placeholderImage: UIImage(named: "tennis.png"))
                 
-                
-                
+                print("tennnis")
+                cell.teamLogo.sd_setImage(with: URL(string: viewModel.tennisArray[indexPath.row].logo ?? "" ),  placeholderImage: UIImage(named: "tennis.png"))
             }
             
             return cell
@@ -147,7 +154,7 @@ class LeagueAllDetailsViewController: UIViewController ,UICollectionViewDelegate
             return CGSize(width: width/3, height: 150)
         }
         else{
-            return CGSize(width:50, height: 50)
+            return CGSize(width:100, height: 100)
         }
         
     }
@@ -157,7 +164,15 @@ class LeagueAllDetailsViewController: UIViewController ,UICollectionViewDelegate
         if collectionView == self.teamsCollectionView {
         let vc =  self.storyboard?.instantiateViewController(withIdentifier: "teamDetails") as! TeamDetailsViewController
         vc.sportType = self.sportType
-            vc.id = viewModel.teamsArray[indexPath.row].id!
+            if(sportType == "tennis"){
+                
+                vc.id = viewModel.tennisArray[indexPath.row].id!
+                vc.name = viewModel.tennisArray[indexPath.row].name!
+                vc.logo = viewModel.tennisArray[indexPath.row].logo
+            }
+            else{
+                vc.id = viewModel.teamsArray[indexPath.row].id!
+            }
         navigationController?.pushViewController(vc, animated: true)
     }
            }
@@ -271,7 +286,7 @@ class LeagueAllDetailsViewController: UIViewController ,UICollectionViewDelegate
             
             viewModel.getLatestFromApi(type: TennisEvent.self, leagId: id)
             viewModel.getUpComingFromApi(type: TennisEvent.self, leagId: id)
-            // viewModel.getTeamsFromApi(type:.self, leagId: id!)
+            viewModel.gettennisPlayerssFromApi(leagId:id)
             
         }
         
