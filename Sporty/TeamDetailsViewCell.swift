@@ -17,7 +17,7 @@ class TeamDetailsViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
         logo.layer.borderWidth = 1
-        logo.layer.borderColor = UIColor.red.cgColor
+        logo.layer.borderColor = UIColor.orange.cgColor
         logo.layer.cornerRadius = logo.frame.size.height / 2
         logo.clipsToBounds = true
     }

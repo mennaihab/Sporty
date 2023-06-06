@@ -8,7 +8,7 @@
 import Foundation
 
 struct FootballTeam:Team{
-    static let url: String = "https://apiv2.allsportsapi.com/football/?&met=Teams&APIkey=\(key)&leagueId=\(leagueId!)"
+    static let url: String = "https://apiv2.allsportsapi.com/football/?&met=Teams&APIkey=\(key)&"
     
     let id: Int?
     
@@ -36,7 +36,5 @@ struct player:Decodable{
     let player_image:String?
     let player_age:String?
     let player_type:String?
-    
-    
     
 }

@@ -9,7 +9,7 @@ import Foundation
 
 struct CricketTeam:Team{
     static let url: String =
-    "https://apiv2.allsportsapi.com/cricket/?&met=Teams&APIkey=\(key)&leagueId=\(leagueId!)"
+    "https://apiv2.allsportsapi.com/cricket/?&met=Teams&APIkey=\(key)&"
 
     
     var id: Int?

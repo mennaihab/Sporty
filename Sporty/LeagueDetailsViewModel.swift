@@ -19,6 +19,7 @@ var isLoading: Bool = false {
 var LatestArray : [EventViewModelCell] = []
 var upComingArray:[EventViewModelCell] = []
 var teamsArray:[TeamsViewModelCell] = []
+    var tennisArray:[playersCell] = []
 
 var numberOfLatestCells: Int = 0 {
 
@@ -40,6 +41,15 @@ var numberOfLatestCells: Int = 0 {
     
     
     var numberOfTeamsCells: Int = 0 {
+
+        didSet {
+            reloadteamsClosure?()
+            
+        }
+        
+    }
+    
+    var numberOfPlayersCells: Int = 0 {
 
         didSet {
             reloadteamsClosure?()
@@ -127,10 +137,13 @@ func addResultsToLatestArray(events:[Event]){
         event.secondTeamLogo = item.secondTeamLogo
         event.gameResult = item.gameResult
         LatestArray.append(event)
+        print("array count")
+        print(LatestArray.count)
     }
   
     isLoading = false
     numberOfLatestCells = LatestArray.count
+    print("number of cells from view model")
     print(numberOfLatestCells)
     
 }
@@ -153,7 +166,7 @@ func addResultsToLatestArray(events:[Event]){
       
         isLoading = false
         numberOfUpComingCells = upComingArray.count
-        print(numberOfUpComingCells)
+       // print(numberOfUpComingCells)
         
     }
 
@@ -173,7 +186,45 @@ func addResultsToTeamsArray(teams:[Team]){
   
     isLoading = false
     numberOfTeamsCells = teamsArray.count
-    print(numberOfTeamsCells)
+    //print(numberOfTeamsCells)
+    
+}
+    
+    func gettennisPlayerssFromApi(leagId:Int)
+{
+    self.isLoading = true
+    apiService.getTennisPlayersFromApi(compilationHandler: { [weak self] (result, error ) in
+       self?.isLoading = true
+        if let error = error{
+            print(error)
+          
+        }
+        else{
+            
+            self?.addResultsToTennisArray(players: result!)
+        }
+        
+    },leagId:leagId)
+}
+
+
+func addResultsToTennisArray(players:[TennisPlayers]){
+
+    for item in players{
+        var player = playersCell()
+        player.id = item.player_key
+        player.logo = item.player_logo
+        player.name = item.player_name
+      tennisArray.append(player)
+       
+    }
+  
+    isLoading = false
+    numberOfPlayersCells = tennisArray.count
+    
+    print("number of cells from view model")
+    print(numberOfPlayersCells)
+   
     
 }
 
@@ -197,5 +248,11 @@ struct TeamsViewModelCell{
     var logo:String?
     
 
+}
+
+struct playersCell{
+    var id :Int?
+    var logo:String?
+    var name:String?
 }
 

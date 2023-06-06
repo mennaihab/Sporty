@@ -8,9 +8,9 @@
 import Foundation
 
 struct BasketballEvent:Event{
-    static let NowPlayingUrl = "https://apiv2.allsportsapi.com/basketball/?met=Fixtures&APIkey=\(key)&from=2023-06-05&to=2024-06-05&leagueId=\(leagueId!)"
+    static let NowPlayingUrl = "https://apiv2.allsportsapi.com/basketball/?met=Fixtures&APIkey=\(key)&from=2023-05-09&to=2024-06-05&"
     
-    static let LatestUrl = "https://apiv2.allsportsapi.com/basketball/?met=Fixtures&APIkey=\(key)&from=2022-05-23&to=\(currentDate!)&leagueId=\(leagueId!)"
+    static let LatestUrl = "https://apiv2.allsportsapi.com/basketball/?met=Fixtures&APIkey=\(key)&from=2022-05-23&"
     let date: String?
     
     let time: String?
