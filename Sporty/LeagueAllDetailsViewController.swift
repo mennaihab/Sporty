@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LeagueAllDetailsViewController: UIViewController ,UICollectionViewDelegate,UICollectionViewDataSource{
+class LeagueAllDetailsViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     var sportType :String?
     var id :Int = 0
@@ -40,7 +40,7 @@ class LeagueAllDetailsViewController: UIViewController ,UICollectionViewDelegate
                 return viewModel.numberOfPlayersCells
             }
             else{
-             
+                
                 return viewModel.numberOfTeamsCells
             }
         }
@@ -114,7 +114,7 @@ class LeagueAllDetailsViewController: UIViewController ,UICollectionViewDelegate
         }
         else{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! TeamViewCell
-        
+            
             if(sportType == "football"){
                 cell.teamLogo.sd_setImage(with: URL(string: viewModel.teamsArray[indexPath.row].logo ?? "" ), placeholderImage: UIImage(named: "football.png"))
                 
@@ -146,24 +146,43 @@ class LeagueAllDetailsViewController: UIViewController ,UICollectionViewDelegate
             cell.layer.cornerRadius = 30
             cell.clipsToBounds = true
         }
+        else{
+            cell.layer.borderWidth = 1
+            cell.layer.borderColor = UIColor.orange.cgColor
+            cell.layer.cornerRadius = cell.frame.size.height/2
+            cell.clipsToBounds = true
+        }
     }
     
+    
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        if(collectionView == self.LatestCollectionView || collectionView == self.upComingCollectionView){
-            let width = collectionView.frame.size.width - 15
-            return CGSize(width: width/3, height: 150)
+        let layout = (collectionViewLayout
+         as! UICollectionViewFlowLayout)
+        let sectionInsets = layout.sectionInset
+        let contentInsets = collectionView.contentInset
+        let vertical = sectionInsets.bottom + sectionInsets.top + contentInsets.top + contentInsets.bottom
+        let horizontal = sectionInsets.right + sectionInsets.left + contentInsets.right + contentInsets.left
+        let bounds = collectionView.bounds.insetBy(dx: horizontal / 2, dy: vertical / 2)
+        if(collectionView == self.LatestCollectionView ||
+           collectionView == self.upComingCollectionView){
+            let targetWidth = 400.0
+            let targetHeight = 200.0
+            let numberPerLine = layout.scrollDirection == .horizontal ? floor(bounds.width / targetWidth) : ceil(bounds.width / targetWidth)
+            let actualWidth = bounds.width / max(numberPerLine, 1)
+            return CGSize(width: actualWidth - layout.minimumInteritemSpacing,
+                          height: min(actualWidth, bounds.height, targetHeight))
+        } else {
+            let minD = min(bounds.width, bounds.height)
+            return CGSize(width: minD, height: minD)
         }
-        else{
-            return CGSize(width:100, height: 100)
-        }
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         if collectionView == self.teamsCollectionView {
-        let vc =  self.storyboard?.instantiateViewController(withIdentifier: "teamDetails") as! TeamDetailsViewController
-        vc.sportType = self.sportType
+            let vc =  self.storyboard?.instantiateViewController(withIdentifier: "teamDetails") as! TeamDetailsViewController
+            vc.sportType = self.sportType
             if(sportType == "tennis"){
                 
                 vc.id = viewModel.tennisArray[indexPath.row].id!
@@ -173,9 +192,9 @@ class LeagueAllDetailsViewController: UIViewController ,UICollectionViewDelegate
             else{
                 vc.id = viewModel.teamsArray[indexPath.row].id!
             }
-        navigationController?.pushViewController(vc, animated: true)
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
-           }
     
     
     func configureNetworkIndicator(){
@@ -264,8 +283,8 @@ class LeagueAllDetailsViewController: UIViewController ,UICollectionViewDelegate
         if(sportType == "football")
         {
             viewModel.getLatestFromApi(type: FootballEvent.self, leagId: id)
-                        viewModel.getUpComingFromApi(type: FootballEvent.self, leagId: id)
-                        viewModel.getTeamsFromApi(type: FootballTeam.self, leagId: id)
+            viewModel.getUpComingFromApi(type: FootballEvent.self, leagId: id)
+            viewModel.getTeamsFromApi(type: FootballTeam.self, leagId: id)
             
         }
         else if(sportType == "basketball")

@@ -105,6 +105,8 @@ class FavouritesTableViewController: UITableViewController {
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "teamDetails") as! TeamDetailsViewController
             
             vc.id = viewModel.favouriteArray[indexPath.row].id!
+            vc.name = viewModel.favouriteArray[indexPath.row].name!
+            vc.logo = viewModel.favouriteArray[indexPath.row].logo!
             print(viewModel.favouriteArray[indexPath.row].type!)
             print(viewModel.favouriteArray[indexPath.row].id!)
             vc.sportType = viewModel.favouriteArray[indexPath.row].type!

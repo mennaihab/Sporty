@@ -50,7 +50,9 @@ class TeamDetailsViewModel{
             
         }, type: type,teamId:teamId)
     }
-    
+    var tennis_id:Int = 0
+    var tennis_logo:String = ""
+    var tennis_name:String = ""
     
     func addResultsToArray(teams:[Team]){
         
@@ -104,11 +106,21 @@ class TeamDetailsViewModel{
     func addToFavourites(context: NSManagedObjectContext,sportType:String){
         let entity = NSEntityDescription.entity(forEntityName: "TeamData", in: context)
         let team = NSManagedObject(entity: entity!, insertInto: context)
-        
-        team.setValue(teamId, forKey: "teamId")
-        team.setValue(teamLogo, forKey: "teamLogo")
-        team.setValue(teamName, forKey: "teamName")
-        team.setValue(sportType, forKey: "sportType")
+        if(sportType == "tennis")
+        {
+            team.setValue(tennis_id, forKey: "teamId")
+            team.setValue(tennis_logo, forKey: "teamLogo")
+            team.setValue(tennis_name, forKey: "teamName")
+            team.setValue(sportType, forKey: "sportType")
+        }
+        else{
+            
+            
+            team.setValue(teamId, forKey: "teamId")
+            team.setValue(teamLogo, forKey: "teamLogo")
+            team.setValue(teamName, forKey: "teamName")
+            team.setValue(sportType, forKey: "sportType")
+        }
         do{
             try context.save()
             

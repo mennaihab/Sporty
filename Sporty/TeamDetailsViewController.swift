@@ -76,7 +76,9 @@ class TeamDetailsViewController: UIViewController,UICollectionViewDelegate,UICol
             
         }
         else{
-            
+            viewModel.tennis_id = id
+            viewModel.tennis_name = name!
+            viewModel.tennis_logo = logo ?? ""
             self.teamName.text = name
             self.teamLogo.sd_setImage(with: URL(string: logo ?? "" ), placeholderImage: UIImage(named: "soccer-player.png"))
             

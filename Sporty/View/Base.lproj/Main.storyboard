@@ -331,19 +331,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Latest Results" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DHK-wb-fhy">
-                                <rect key="frame" x="41" y="79" width="318" height="21"/>
+                                <rect key="frame" x="143" y="79" width="107.33333333333331" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UpComing Events" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBd-Do-iX1">
-                                <rect key="frame" x="94" y="296" width="210" height="21"/>
+                                <rect key="frame" x="128.33333333333331" y="296" width="136.33333333333331" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teams" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4AH-OS-2F8">
-                                <rect key="frame" x="116" y="723" width="123" height="21"/>
+                                <rect key="frame" x="171.66666666666666" y="723" width="50" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -351,22 +351,13 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kba-8Q-7cn">
                                 <rect key="frame" x="0.0" y="337" width="393" height="379"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="O97-Gv-qnh">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="O97-Gv-qnh">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="PTv-Id-0uM" customClass="LeagueDetailsViewCell" customModule="Sporty" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="eOS-9Z-w1D">
-                                            <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
-                                    </collectionViewCell>
-                                </cells>
+                                <cells/>
                             </collectionView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ytW-ky-W1h">
                                 <rect key="frame" x="0.0" y="752" width="393" height="55"/>
@@ -374,23 +365,13 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="cbm-AZ-xW5"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Tv8-dZ-Ho5">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Tv8-dZ-Ho5">
                                     <size key="itemSize" width="81" height="76"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="FSO-3k-NUK" customClass="LeagueDetailsViewCell" customModule="Sporty" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="-10.666666666666666" width="81" height="76"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ffc-8x-qx2">
-                                            <rect key="frame" x="0.0" y="0.0" width="81" height="76"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
-                                        <size key="customSize" width="81" height="76"/>
-                                    </collectionViewCell>
-                                </cells>
+                                <cells/>
                             </collectionView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Syu-S2-keU">
                                 <rect key="frame" x="4" y="110" width="393" height="160"/>
@@ -398,45 +379,32 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="160" id="dBK-gd-XaF"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="L4g-y7-jpT">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="L4g-y7-jpT">
                                     <size key="itemSize" width="128" height="160"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="gEX-S4-xdN" customClass="LeagueDetailsViewCell" customModule="Sporty" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="160"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="T0S-EC-HKQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="160"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
-                                        <size key="customSize" width="128" height="160"/>
-                                    </collectionViewCell>
-                                </cells>
+                                <cells/>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Vid-ul-IC1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Vid-ul-IC1" firstAttribute="trailing" secondItem="4AH-OS-2F8" secondAttribute="trailing" constant="154" id="7Dc-Gl-Lwb"/>
                             <constraint firstItem="DHK-wb-fhy" firstAttribute="top" secondItem="Vid-ul-IC1" secondAttribute="top" constant="20" id="7uM-m9-6eh"/>
                             <constraint firstItem="Syu-S2-keU" firstAttribute="top" secondItem="DHK-wb-fhy" secondAttribute="bottom" constant="10" id="8lJ-DK-QMe"/>
+                            <constraint firstItem="DHK-wb-fhy" firstAttribute="centerX" secondItem="Djl-Xw-8CF" secondAttribute="centerX" id="IXJ-rG-JMF"/>
                             <constraint firstItem="Syu-S2-keU" firstAttribute="leading" secondItem="Vid-ul-IC1" secondAttribute="leading" constant="4" id="NVN-xp-NgA"/>
                             <constraint firstItem="Vid-ul-IC1" firstAttribute="bottom" secondItem="ytW-ky-W1h" secondAttribute="bottom" constant="11" id="P1J-Jf-g66"/>
                             <constraint firstItem="kba-8Q-7cn" firstAttribute="trailing" secondItem="Vid-ul-IC1" secondAttribute="trailing" id="RLt-bk-mpa"/>
+                            <constraint firstItem="oBd-Do-iX1" firstAttribute="centerX" secondItem="Djl-Xw-8CF" secondAttribute="centerX" id="XnZ-m5-QVE"/>
                             <constraint firstItem="oBd-Do-iX1" firstAttribute="top" secondItem="Syu-S2-keU" secondAttribute="bottom" constant="26" id="YGm-XF-dFb"/>
                             <constraint firstItem="ytW-ky-W1h" firstAttribute="leading" secondItem="Vid-ul-IC1" secondAttribute="leading" id="aay-rT-59p"/>
                             <constraint firstItem="Syu-S2-keU" firstAttribute="trailing" secondItem="Vid-ul-IC1" secondAttribute="trailing" constant="4" id="bYe-I9-q3V"/>
-                            <constraint firstItem="Vid-ul-IC1" firstAttribute="trailing" secondItem="DHK-wb-fhy" secondAttribute="trailing" constant="34" id="cdl-9i-0GB"/>
                             <constraint firstItem="4AH-OS-2F8" firstAttribute="top" secondItem="kba-8Q-7cn" secondAttribute="bottom" constant="7" id="dy6-SF-ZuZ"/>
                             <constraint firstItem="Vid-ul-IC1" firstAttribute="trailing" secondItem="ytW-ky-W1h" secondAttribute="trailing" id="elw-JF-gVx"/>
-                            <constraint firstItem="DHK-wb-fhy" firstAttribute="leading" secondItem="Vid-ul-IC1" secondAttribute="leading" constant="41" id="gCu-c7-nyn"/>
                             <constraint firstItem="kba-8Q-7cn" firstAttribute="leading" secondItem="Vid-ul-IC1" secondAttribute="leading" id="iG0-0F-c6D"/>
-                            <constraint firstItem="oBd-Do-iX1" firstAttribute="leading" secondItem="Vid-ul-IC1" secondAttribute="leading" constant="94" id="iPb-Qg-o3q"/>
-                            <constraint firstItem="4AH-OS-2F8" firstAttribute="leading" secondItem="Vid-ul-IC1" secondAttribute="leading" constant="116" id="mcW-L2-bFj"/>
-                            <constraint firstItem="Vid-ul-IC1" firstAttribute="trailing" secondItem="oBd-Do-iX1" secondAttribute="trailing" constant="89" id="myv-ww-3aM"/>
+                            <constraint firstItem="4AH-OS-2F8" firstAttribute="centerX" secondItem="Djl-Xw-8CF" secondAttribute="centerX" id="kgi-um-zYQ"/>
                             <constraint firstItem="kba-8Q-7cn" firstAttribute="top" secondItem="oBd-Do-iX1" secondAttribute="bottom" constant="20" id="uwd-ed-H7q"/>
                             <constraint firstItem="ytW-ky-W1h" firstAttribute="top" secondItem="4AH-OS-2F8" secondAttribute="bottom" constant="8" id="wmx-Tg-zAC"/>
                         </constraints>

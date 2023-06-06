@@ -10,13 +10,13 @@ import UIKit
 class TeamViewCell: UICollectionViewCell {
     
     @IBOutlet weak var teamLogo: UIImageView!
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        teamLogo.layer.borderWidth = 1
-        teamLogo.layer.borderColor = UIColor.red.cgColor
-        teamLogo.layer.cornerRadius = teamLogo.frame.size.height / 2
-        teamLogo.clipsToBounds = true
-    }
+//    override func layoutSubviews() {
+//        super.layoutSubviews()
+//        teamLogo.layer.borderWidth = 1
+//        teamLogo.layer.borderColor = UIColor.red.cgColor
+//        teamLogo.layer.cornerRadius = teamLogo.frame.size.height / 2
+//        teamLogo.clipsToBounds = true
+//    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
